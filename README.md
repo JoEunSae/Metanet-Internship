@@ -5,7 +5,7 @@
 
 <h1>1주차</h1>
 <ul>
-  <li></li> <a href="Week1.Day1.md">1일차</a></li>
+  <li><a href="Week1/Day1.md">1일차</a></li>
   <li>2일차</li>
   <li>3일차</li>
   <li>4일차</li>
