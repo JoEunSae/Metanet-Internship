@@ -1,6 +1,6 @@
 # <p align="center">메타넷 클라우드/인프라 인턴 교육</p>
 
-<p algin="center"><img src="images/인프라엔지니어교과서.jpg"></p>
+<p align="center"><img src="images/인프라엔지니어교과서.jpg"></p>
 
 <h1>1주차</h1>
 <ul>
