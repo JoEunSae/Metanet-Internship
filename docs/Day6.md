@@ -10,7 +10,7 @@ WindowEC2 생성 및 연결 실습 진행
 
 ---
 
-![사진](../images/그림으로.jpg)
+<img src="../images/그림으로.jpg" width="500" height="500">
 
 ## 2주차부터는 위 책으로 교육 진행
 
