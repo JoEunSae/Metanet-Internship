@@ -133,4 +133,8 @@ Stateful : 요청 정보를 저장하여 응답하는 트래픽 제어를 하지
 
 ![사진](../images/vpc네트워크환경.jpg)
 
-###AWS 아키텍쳐 다이어그램 제작 사이트  <https://app.diagrams.net/?splash=0&libs=aws4>
+### AWS 아키텍쳐 다이어그램 제작 사이트  <https://app.diagrams.net/?splash=0&libs=aws4>
+
+**네트워크 아키텍쳐 다이어그램**
+
+![사진](../images/아키텍쳐다이어그램.png)
