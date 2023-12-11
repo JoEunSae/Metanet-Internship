@@ -4,7 +4,9 @@
 
 Serverless : 서버가 없는 것이 아니라 고객이 관리할 서버가 없는것 CSP에서 서버를 관리해주는 방식
 
-![WindowEC2 생성 및 연결 실습](images/윈도우EC2생성.PNG)
+WindwoEC2 생성 및 연결 실습 진행
 
+![예제 이미지](../images/윈도우EC2생성.PNG)
 
-<p><img src="images/윈도우EC2생성.PNG"></p>
+---
+
