@@ -12,3 +12,8 @@
 
 
 ## 2주차
+- [Day6](./docs/Day6.md)
+- [Day7](./docs/Day7.md)
+- [Day8](./docs/Day8.md)
+- [Day9](./docs/Day9.md)
+- [Day10](./docs/Day10.md)
