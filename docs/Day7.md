@@ -88,8 +88,13 @@
 **ARP** : MAC -> IP <br>
 **RARP** : IP -> MAC
 
+---
 
+### AWS VPC 실습 진행
 
+![사진](../images/vpc생성.png)
+
+![사진](../images/vpc정보.png)
 
 
 
