@@ -28,6 +28,8 @@ public에서 private으로 접속해 ping을 보내기 위한 인바운드 규�
 
 ![사진](../images/인바운드규칙.png)
 
-ICMP 트로토콜을 추가해 ping을 보낼 수 있게 포트를 열어준다.
+ICMP 프로토콜을 추가해 ping을 보낼 수 있게 포트를 열어준다.
 
 ![사진](../images/ping.png)
+
+이후 public subnet에서 private에 Ping이 정상적으로 가는걸 확인할 수 있다.
