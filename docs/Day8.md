@@ -1,5 +1,11 @@
 # Day8
 
+### IPv6
+- 인터넷 프로토콜 스택 중 네트워크 계층의 프로토콜로서 버전 6 인터넷 프로토콜(version 6 Internet Protocol)로 제정된 차세대 인터넷 프로토콜
+
+
+
+
 **CIDR(Classless Inter-Domain Routing)** : 인터넷상의 데이터 라우팅 효율성을 향상시키는 IP 주소 할당 방법 
 
 ---
