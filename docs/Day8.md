@@ -23,8 +23,8 @@ VPC2개 생성
 
 ![사진](../images/피어링.png)
 
-이후 public EC2의 **서브넷 라우팅 테이블**에 private 주소 추가<br>
-반대로 private에도 public 주소 추가
+이후 public EC2의 **서브넷 라우팅 테이블**에 private 서브넷 주소 추가<br>
+반대로 private에도 public 서브넷 주소 추가
 
 ![사진](../images/서브넷라우팅테이블1.png)
 
@@ -39,3 +39,5 @@ ICMP 프로토콜을 추가해 ping을 보낼 수 있게 포트를 열어준다.
 ![사진](../images/ping.png)
 
 이후 public subnet에서 private에 Ping이 정상적으로 가는걸 확인할 수 있다.
+
+public에서 private로 접속하기 위해 pirvate의 키페어를 
