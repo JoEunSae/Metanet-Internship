@@ -69,15 +69,32 @@
 
 **방화벽은 3.4계층에서 동작**
 
-### NACL
+### Network ACL
+- 서브넷 내부와 외부의 트래픽을 제어하기 위한 가상 방화벽으로 네트워크 스위치의 ACL과 역할이 같음
+- 서브넷의 가상 방화벽이기 때문에 서브넷에 속한 모든 인스턴스가 영향을 받음
+- 기본적으로 모든 인바운드와 아웃바운드 트래픽을 허용함
+- 하나의 ACL은 다수의 서브넷과 연결될 수 있으며, 하나의 서브넷은 하나의 ACL만 연결됨
+- NetWork ACL의 가장 큰 특징은 'Statless'로서 인바운드 규칙과 아웃바운드 규칙이 서로 영향을 줌 즉 인바운드에는 HTTP(80)포트 가 허용되어 있으나, 아웃바운드에 없는 경우 HTTP 트래픽이 '외부에서 들어왔다 나갈때' 아웃바운드 통신이 되지않음
+- Security Group과 달리 우선순위 값이 존재하며 가장 작은 값이 가장 높은 우선순위를 가지고 우선순위부터 순서대로 적용됨
+- 허용과 거부 모두 가능
+- 설정 변경시 즉시 적용됨
 
-### Security Group vs NACL
+
+### Security Group vs Network ACL
 
 ![사진](../images/보안그룹NACL비교.png)
 
 ### VPC Peering
+- 두 VPC 간의 트래픽을 전송하기 위한 기능
+- Source VPC와 같은 / 다른 리전의 VPC를 Destination으로 선택하여 Peering 요청을 보낸 후, 수락시 Peering가능
+- 요청과 수락이 필요한 이유는 다른 계정의 VPC도 연결 가능하기 때문
+- Peering 생성 후 라우팅 테이블에 해당 peering을 집어넣으면 통신 시작
+- VPC Peering은 Transit Routing 불가
 
 ### VPC Endpoint
+- VPC 내 요소들과 非VPC 서비스들을 외부 인터넷을 거치지 않고 아마존 내부 백본 네트워크를 통해 연결하는 방법
+- VPC 엔드포인트에는 Interface Endpoint, Gateway Endpoint 두 종류가 존재
+- Gateway Endpoing는 S3와 Dynamo DB만 가능
 
 ![사진](../images/peering.png)
 
@@ -85,9 +102,45 @@
 **3계층에서 라우팅테이블 수정**<br>
 **4계층에서 보안그룹 조정**
 
+### VPN(Virtual Private Network)
+- 이 VPN을 통해 AWS와 On-premise의 VPN을 연결하는 것이 가능
+- 고객 측 공인 IP를 뜻하는 'Customer Gateway'와 측 게이트웨이인 'Virtual Private Gateway'생성 후 터널을 생성하면 사용 가능
+- 반드시 VPC에서 VPN 터널 쪽으로 라우팅을 생성해야 함
+
+### Direct Connect
+- AWS의 전용선 서비스
+- 보통 On-premise의 네트워크와 VPC를 연결할 때 사용
+- VPN보다 더 안전하고 빠른 속도를 보장받고 싶을 때 사용
+
+## ELB(Elastic Load Balancer)
+
+### ELB란?
+- 단일 또는 여러 가용 영역에서 다양한 애플리케이션의 부하를 처리할 수 있는 네가지의 로드 밸런서는 모두 애플리케이션의 내결함성에 필요한 고가용성, 자동 조정, 강력한 보안을 갖추고 있다.
+
+### ELB 종류
+- ALB(Application Load Balancer)
+- NLB(Network Load Balancer)
+- GLB(Gateway Load Balancer)
+- CLB(Classic Load Balancer)
+
+### ELB 기능
+- 보안
+- 고가용성 및 탄력성
+- 높은 처리량
+- 상태 확인
+- 고정 세션
+- 운영 모니터링 및 로깅
+- 삭제 방지
+- AWS로 마이그레이션
+- 하이브리드 클라우드 구축
+- 서버리스 운영 및 컨테이너로 애플리케이션 현대화
+
+
 
 ---
 
 ### AWS 실습 진행
+
+**Private Subnet에서 인터넷에 접근하기위해
 
 **Internet Gateway**생성 
