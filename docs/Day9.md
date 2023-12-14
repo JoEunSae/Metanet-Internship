@@ -67,7 +67,16 @@
 
 ![사진](../images/보안그룹NACL비교.png)
 
- 
+### VPC Peering
+
+### VPC Endpoint
+
+![사진](../images/peering.png)
+
+**2계층에서 Peering**<br>
+**3계층에서 라우팅테이블 수정**<br>
+**4계층에서 보안그룹 조정**
+
 
 ---
 
