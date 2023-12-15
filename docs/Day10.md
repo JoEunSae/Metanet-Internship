@@ -23,7 +23,7 @@
 - 제출 방법: 공유 폴더 / 설계도 제출 ppt에 본인이름 장표로 캡처해서 제출
 (S3,AMI,ec2 endpoint,VPC/subnet/routing table/igw/peering/SG/NCAL/ALB/ASG…)
 
-![사진](../images/아키텍처.png)
+![사진](../images/아키텍처.PNG)
 
 ### 2.본인 prod-VPC를 구축(10.1X.0.0/16) 구축 후
 490303288721 소유의 버지니아 리전/vpc-bb5ca5c6 VPC와 Peering 후 172.31.19.47 인스턴스의
