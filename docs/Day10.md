@@ -49,7 +49,7 @@
 ## 2주간 내용으로 Workshop진행
 
 ### 1. 클라우드 네트워크 실습한 내용을 설계도로 표현하여 제출하시오.
-(S3,AMI,ec2 endpoint,VPC/subnet/routing table/igw/peering/SG/NCAL/ALB/ASG…)
+(S3,AMI,ec2 endpoint,VPC/subnet/routing table/igw/peering/SG/NACL/ALB/ASG…)
 
 ![사진](../images/아키텍처.PNG)
 
