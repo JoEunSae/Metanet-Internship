@@ -40,4 +40,7 @@ ICMP 프로토콜을 추가해 ping을 보낼 수 있게 포트를 열어준다.
 
 이후 public subnet에서 private에 Ping이 정상적으로 가는걸 확인할 수 있다.
 
-public에서 private로 접속하기 위해 pirvate의 키페어를 
+public에서 private로 접속하기 위해 pirvate의 키페어를 복사하여 vi편집기로 파일 생성 후<br>
+"chmod 400"으로 권한 수정 하고, "ssh -i dsdw.pem 유저이름@프라이빗 아이피" 명령어로 private에 접속할 수 있다.
+
+
