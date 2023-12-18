@@ -20,8 +20,8 @@
 
 
 ## 3주차
-- [Day7](./docs/Day7.md)
-- [Day8](./docs/Day8.md)
-- [Day9](./docs/Day9.md)
-- [Day10](./docs/Day10.md)
 - [Day11](./docs/Day11.md)
+- [Day12](./docs/Day12.md)
+- [Day13](./docs/Day13.md)
+- [Day14](./docs/Day114.md)
+- [Day15](./docs/Day15.md)
