@@ -51,5 +51,22 @@ history
 
 **환경변수**
 
+![사진](../images/환경변수.png)
+
+
+### 초기화 스크립트
+**bash 초기화 파일**
+- 로그인할 때마다 자동으로 수행하는 파일
+- 윈도우의 autoexec.bat 파일과 유사
+- 위치 : 사용자의 홈 디렉토리 (~)
+- .bash_profile(또는 .profile)
+  - 환경 변수의 설정이나 쉘이 생성될 때 자동으로 수행해야 할 명령을 등록하는 파일
+- .bashrc
+  - 사용자가 새로 설정하는 alias 명령을 등록하는 파일
+- 변경 후 다시 로그인 없이 즉시 쉘에 적용할 때는 soruce 명령 이용
+  - source ~/.bash_profile  또는 soruce ~/.bashrc
+
+![사진](../images/초기화파일.png)
+
 
 
