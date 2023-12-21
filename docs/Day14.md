@@ -82,4 +82,19 @@ systemctl status name.service           상태보기
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/10030d9b-51f6-4468-bb3c-e17bf22418a7)
 
+### systemd-journald
+
+#### systemd-journald
+- 커널, 부팅 과정의 초기 단계, 대몬 프로세스의 기동이나 실행 중 발생되는 표준 rsyslogd가 수진하는 모든 로그
+- 기본적으로 메모리상에 기록되므로 재 기동하면 초기화(/run/)
+
+#### 저널을 디스크로 저장
+- 기본 경로 : /var/log//journal
+- 기본적으로 파일시스템의 10% 이상을 초과하거나
+- 파일시스템의 free 공간이 15% 미만이 되면 기록 중단
+
+#### journalctl
+- 가장 오래된 로그부터 시작하여 모든 시스템 저널을 보여주는 명령
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/778a1ed6-0098-46ee-9603-5811495680cd)
 
