@@ -23,5 +23,5 @@
 - [Day11](./docs/Day11.md)
 - [Day12](./docs/Day12.md)
 - [Day13](./docs/Day13.md)
-- [Day14](./docs/Day114.md)
+- [Day14](./docs/Day14.md)
 - [Day15](./docs/Day15.md)
