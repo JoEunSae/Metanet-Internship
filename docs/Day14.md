@@ -98,3 +98,92 @@ systemctl status name.service           상태보기
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/778a1ed6-0098-46ee-9603-5811495680cd)
 
+
+```bash
+[student@localhost shell]$ dir_path=/home/student/testdir
+[student@localhost shell]$ echo ${dir_path#/*}
+home/student/testdir
+[student@localhost shell]$ echo ${dir_path##/*}
+
+[student@localhost shell]$ echo ${dir_path##*/}
+testdir
+[student@localhost shell]$ echo ${dir_path#*/}
+home/student/testdir
+[student@localhost shell]$ ^C
+[student@localhost shell]$ echo ${dir_path%/*}
+/home/student
+[student@localhost shell]$ echo ${dir_path%%/*}
+
+[student@localhost shell]$ dir_path=
+[student@localhost shell]$ echo ${dir_path:-hello}
+hello
+```
+
+### 셸 스크립트 작성과 실해
+
+#### 셸 스크립트 작성
+
+name.sh
+```bash        
+#!/bin/sh
+echo "사용자 이름:" $USER
+echo "홈 디렉터리:" $HOME
+exit 0
+```
+
+#### 셸 스크립트 실행
+
+- `sh name.sh`
+- `./name.sh`
+
+#### 파라미터 변수
+
+paravar.sh
+```bash
+#!/bin/sh
+echo "실행파일 이름은 <$0>이다"
+echo "첫번째 파라미터는 <$1>이고, 두번째 파라미터는 <$2>다"
+echo "전체 파라미터는 <$*>다"
+exit 0
+```
+
+
+
+### if문과 case문
+
+#### 기본 if문
+
+```bash
+if [ 조건 ]
+then
+   참일 경우 실행
+fi
+```
+
+#### if~else문
+```bash
+if [ 조건 ]
+then
+   참일 경우 실행
+else
+   거짓인 경우 실행
+fi
+```
+
+#### 조건에 들어가는 비교 연산자
+
+**문자열 비교**
+- "문자열1" = "문자열2" 두 문자열이 같으면 참
+- "문자열1" != "문자열2" 두 문자열이 같이 않으면 참
+- -n "문자열" 문자열 NULL이 아니면 참
+- -z "문자열" 문자열이 NULL이면 참
+
+**산술 비교 연산자**
+- 수식1 -eq 수식2 :두 수식이 같으면 참
+- 수식1 -ne 수식2 : 두 수식이 같지 않으면 참
+- 수식1 -gt 수식2 : 수식1이 크다면 참
+- 수식1 -ge 수식2 : 수식1이 크거나 같으면 참
+- 수식1 -lt 수식2 : 수식1이 작으면 참
+- 수식1 -le 수식2 : 수식1이 작거나 같으면 참
+- !수식 : 수식이 거짓이라면 참
+
