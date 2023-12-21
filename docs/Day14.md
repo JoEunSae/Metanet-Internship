@@ -147,6 +147,7 @@ echo "전체 파라미터는 <$*>다"
 exit 0
 ```
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/24e4b65c-fc55-4f47-91a4-5b1c91d66602)
 
 
 ### if문과 case문
