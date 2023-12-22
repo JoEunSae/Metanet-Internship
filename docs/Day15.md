@@ -66,6 +66,21 @@ done
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/4377ec3f-7762-4735-9850-af98b4e0aa21)
 
 
+#### 배열 사용하기
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/88e2547b-176f-4959-a3d3-0a5504bc5864)
+
+#### While
+
+```bash
+#!/bin/bash
+while [ 명령 ]
+do
+  명령
+done
+exit
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/8e064ba0-1812-4e9a-b8e1-9209cbb4aa52)
 
 
 
