@@ -27,3 +27,7 @@
 - 변수=$(명령어   )
 - 변수="$변수     "
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/40072aba-5401-49a5-85ed-d86a45b4a9ae)
+
+
+
