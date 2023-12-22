@@ -79,8 +79,12 @@ do
   명령
 done
 exit
+```
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/8e064ba0-1812-4e9a-b8e1-9209cbb4aa52)
 
+### 루한루프 활용하기
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bcee67e8-6ea9-45c5-8112-b03af586c803)
 
 
