@@ -29,5 +29,43 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/40072aba-5401-49a5-85ed-d86a45b4a9ae)
 
+---
+
+#### case~esac문
+
+```bash
+#!/bin/sh
+case $변수명 in
+  pattern1)
+    echo 명령어;;
+  pattern2)
+    echo 명령어2;;
+esac
+```
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/44885107-25de-43e3-99a6-49c67484ec4d)
+
+### 반복문
+
+#### for~in문
+```bash
+for 반복변수명 in 값1 값2
+do
+    명령어
+      .
+      .
+done
+```
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bc5ac01f-51c3-4e9d-b7c0-ded052833779)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5fefaf1d-d7e7-45a0-a0fd-564368e25792)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/dd0b17db-d024-4ca4-a815-3342cfb9809c)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/4377ec3f-7762-4735-9850-af98b4e0aa21)
+
+
+
 
 
