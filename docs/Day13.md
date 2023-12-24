@@ -88,13 +88,136 @@
 - `route`
   ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/4666575c-2164-4a16-b40e-719cdc55e2c9)
 
+## 네트워크 진단 도구
+
+### 네트워크 진단 도구
+- 네트워크를 통해 정상적인 통신이 가능한지 확인하는 방법
+
+#### ping
+- 상대 시스템으로 echo 패킷을 전송하고 이엥 대한 응답 패킷 수신 여부에 따라 통신 가능 여부를 확인
+- 통신 양이 많은 서버의 경우 통신이 가능하더라도 응답하지 않도록 설정될 수 있음
+- `ping [옵션] 목적지_IP주소`
+  - -c # : 목적지로 전송할 echo 패킷 개수(#)
+  - -i # : 각 패킷 전송 사이의 전송 시간 간격(초)
+
+#### host
+- 인터넷 이용시 사용하는 도메인 명 검색에 사용하는 도구, 주로 DNS 서버의 설정을 확인할 때 사용
+- `host 목적지_도메인명`
+
+#### mtr
+- ping + 경로 추적 도구
+- `mtr 목적지_호스트명 또는 IP주소`
+
+#### netstat
+- 각 프로토콜 별 활성화된 서비스 및 서비스 관련 프로세스 목록 확인
+- `netstat [옵션]
+  ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/37cc98ee-2aba-4b3e-a88e-0a91af9c2231)
 
 
+#### TCP 프로토콜의 상태 천이도
 
-  
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/88ff98c6-9713-4b8a-bda1-9fe7cb068d77)
 
+### 패킷 수집 및 분석도구
 
+#### tcpdump
+- 텍스트 기반의 패킷 수집 및 분석 도구
+- 리눅스 배포판에 기본적으로 설치됨
+- `tcpdump [옵션] [표현식 패턴]
+  - `-i 인터페이스명` : 인터페이스로부터 네트워크 패킷 수집 및 분석
+  - `-r 파일명` : 파일로부터 패킷 정보를 읽어들여 분석
+  - `-w 파일명` : 인터페이스로부터 수집된 패킷 정보를 파일로 저장
+  - `-ttt` : timestamp 기능
+  - `-vv` : 분석 정보 상세 보기 설정
 
+## 기타도구
 
+#### 시스템 사양 정보 확인
 
+#### uname
+- 리눅스가 설치되어 있는 시스템의 사양에 대한 정보를 간단히 확인할 수 있는 도구
+- `uname [옵션]`
+  - -a : 시스템 사양에 관한 모든 정보 출력
+  - -s : OS의 종류 출력
+  - -n : nodename, 즉 호스트명 출력
+  - -r : 커널의 릴리즈 번호
+  - -m : 머신 종류, 즉 하드웨어 플랫폼 종류 출력
+ 
+### 로그인 되어 있는 사용자 확인
+
+#### who
+- 현재 리눅스 서버에 콘솔 또는 원격으로 접속되어 있는 사용자 목록 확인
+  ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/26cbdcee-8c98-435f-a552-d79e4f4feb0b)
+
+#### w
+- 현재 리눅스에 로그인 되어 있는 사용자가 어떤 작업을 수행하고 있는지 확인
+  ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5a95a179-c28d-475f-9fba-0c7ba05eab14)
+
+### 하드웨어 사양 진단 도구
+
+#### lscpu
+- cpu 사양에 대한 정보가 상세히 출력
+
+#### lsblk
+- 현재 장착되어있는 블록형 장치의 목록 출력
+
+#### lsusb
+- 현재 리눅스에 연결되어 있는 USB 장치에 대한 목록 출력
+
+#### lshw
+- 현재 리눅스가 설치되어 있는 시스템 하드웨어 사양 목록을 상세하게 출력
+
+## 소프트웨어 패키지 관리
+
+### Ununtu Linux의 SW 패키지 관리자
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a971d52d-bc2c-457d-98a6-1f7e4716a3d4)
+
+### rpm 관리자를 이용한 오픈소스 패키지 관리
+
+#### rpm 패키지 관리자
+- 레드햇사에서 만든 소프트웨어 관리도구
+- 윈도우의 setup 또는 installer와 유사
+- 소프트웨어를 쉽게 설치 또는 삭제할 수 있음
+
+#### 패키지 설치 및 업그레이드
+- `rpm -i[옵션] rpm_패키지파일`
+- `rpm -U[옵션] rpm_패키지파일`
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0a585d8f-3bd7-4406-967d-cc9d49fdd88c)
+
+#### 패키지 삭제
+- `rpm -e [옵션] 패키지명`
+
+### dnf 관리자를 이용한 오픈소스 패키지 관리
+
+#### dnf 패키지 관리자
+- rpm 기반의 패키지 도구
+- 패키지를 분석하여 의존성을 해결
+- 패키지 저장소로부터 원격 자동 업데이트 및 설치 가능
+
+#### 저장소 설정
+- /etc/yum.repos.d/패키지저장소파일
+
+#### 패키지 목록 확인
+- `dnf list [명령] [패키지명]
+  - all : 설치되어있거나 설치 가능한 패키지 목록 출력
+  - available : 설치 가능한 패키지 목록 출력
+  - updates : 업데이트 가능한 패키지 목록 출력
+  - installed : 설치되어 있는 패키지 목록 출력
+  - 패키지명 : 패키지 설치 여부 상태 확인
+
+#### 패키지 설치 및 업그레이드
+- `dnf [-y] install 패키지명`
+- `dnf update [패키지명]`
+- `dnf upgrade [패키지명]`
+
+#### 패키지 삭제
+- `dnf [-y] erase 패키지명`
+- `dnf [-y] remove 패키지명`
+
+#### 패키지 정보
+- `dnf info 패키지명`
+
+#### 패키지 검색
+- `dnf search all "검색키워드"`
 
