@@ -71,7 +71,7 @@
 
 #### IP 도구
 - 네트워크 장치, IP주소 및 라우팅 정보 등을 확인하는 도구
-- 사용법) ip 명령
+- `ip 명령`
   - addr : 네트워크 장치에 설정되어있는 ip 프로토콜 정보
     ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5e173a67-e2c2-476c-8962-c99821d16b3f)
 
