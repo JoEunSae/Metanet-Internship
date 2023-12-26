@@ -1,7 +1,6 @@
 # 👨‍🎓💻 메타넷 클라우드/인프라 인턴 교육
 
 <p align="center"> 
-  <b>교육과정</b><br><br>
   <img src="https://github.com/JoEunSae/Metanet-Internship/assets/83803199/dc1ebfd9-71d0-4c8f-87f4-7a95e38c9fec"><
 </p>
 
