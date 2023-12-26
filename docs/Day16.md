@@ -66,13 +66,26 @@
 - 물리적 볼륨 생성 : pvcreate
 - 논리적 볼륨 그룹 생성 : lvcreate
 - 볼륨확장 : vgextend / lvextend
-- 파일시스템 용량 증성 : resize2fs(ext계열)/xfs_growfs(xfs)
+- 파일시스템 용량 증설 : resize2fs(ext계열)/xfs_growfs(xfs)
 
 ### LVM구성하는법
 - 디스크 추가
-- `pvcreate`로 pv생성
-- `vgcreate`로 pv생성
-- `lvcreate`로 lv을 원하는 크기로 생성
+- `fdisk /dev/sda' 파티셔닝
+- `pvcreate /dev/sda1` `pvcreate /dev/sda2`로 pv생성
+  - `pvs`로 생성된 pv확인
+- `vgcreate vg00 /dev/sda1 /dev/sda2`로 vg생성
+  - `vgs`로 생성된 vg확인 
+- `lvcreate -L 7G vg00 -n lv00`로 vg00에서 7G를 lv00에 할당 
+  - `lvs`로 생성된 lv확인
+- `mkfs.ext4 /dev/vg00/lv00`으로 lv00 ext4타입으로 포맷
+- `lvextend -L +2G /dev/vg00/lv00`으로 2G 추가할당
+- `mkdir`로 마운트 포인트 생성
+- `vi /etc/fstab'에서 `UUID 마운트포인트 ext4 0 0 `추가
+- `-mount -a`로 fatab에 있는 모든 파일시스템을 마운트한다.
+
+
+
+  
  
 
  
