@@ -24,6 +24,17 @@
 ### 함수연습
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/4a8719bd-931b-4b22-a5a0-c367226a6f3f) ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/510eb642-8f47-4ef8-a80d-acec63e099bf)
 
+**다양하게 함수 활용하기**
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2864c523-75b5-46d2-8a87-5e888fcbd811)
+
+**배열 활용하기**
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/53ba14ec-a826-4b00-9098-af1da528f991)
+
+
+
+
 
 
 
