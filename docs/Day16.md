@@ -1,8 +1,8 @@
 # Day16(12월26일)
 
-continue
-exit와 break의 차이
-exit는 쉘을 그냥 종료 break는 반복문만 종료 
+**continue** : 반복문의 다음 조건으로 넘어가게 한다.<br>
+**exit** : 해당 쉘 프로그램을 완젼히 종료한다.<br>
+**break** : 해당 반복문만 종료한다
 
 ### 함수
 
