@@ -27,7 +27,7 @@ ssh-keygen - 키만들기
 
 
  ## DNS
- - IP 주소 및 기타 데이터를 저장하고 이름별로 쿼리할 수 있게 해주는 계층형 분산 데이터베이스
+ - 사용자가 IP 주소 대신 인터넷 도메인 이름과 검색 가능한 URL을 사용하여 웹사이트에 접속하는 것을 가능하게 해준다.
 
 ### DNS 서버 구축
 
@@ -40,4 +40,29 @@ sudo dnf install -y bind bind-utils
 - com : tab-level domain명
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/af961848-416b-4684-a19f-29079e2aa143)
+
+/etc/named_conf수정
+
+/etc/named.rfc1912.zones
+
+`dig @192.168.91.128 www.google.com`
+
+**도메인명의 마지막은 '.'**
+
+/etc/resolv.conf - NameServer IP 등록
+
+
+#### 포워드 존 파일의 문법
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/810ab4f6-38b1-4f0c-a9a7-7f023bf27359)
+
+- ! : 주석
+- $TTL : Time to Live의 약자로 www.eaxmple.com의 호스트 이름을 물었을 때 문의한 다른 네임 서버가 해당 IP 주소를 캐시에 저장하는 시간을 의미
+- @ : /etc/named.conf에 정의된 example.com을 의미한다.
+- SOA : 괄호 안의 숫자는 시간을 의미
+- NS : 설정된 도메인의 네임 서버 역학을 하는 컴퓨터를 지정하는 부분이다.
+- A : 호스트 이름에 상응하는 IP 주소를 지정하는 부분
+- CNAME : 호스트 이름에 별칭을 부여할 때 사용한다.
+
+
 
