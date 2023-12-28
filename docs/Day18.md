@@ -55,7 +55,19 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/76216b28-7c27-4374-a377-fb949d53a709)
 
-9. curl로 `"www.example.com" 과 "vh.example.com"`으로 접근
+
+8. DNS 서버에서 `/etc/resolv.conf` namerserver ip를 자신의 nameserver ip로 변경
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/cc4bb38b-7809-456b-a987-5ed456202719)
+
+9. DNS 서버에서 `/var/named/named.example.com` 파일에서 zoon 설정
+    
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/e4b62648-dbcb-4b42-92d4-5593e18e5a17)
+
+10. 해당 도메인으로 접근
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/96aae25d-9849-498d-a7dc-4616d1ef8730)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2dede75b-bf9d-4a72-8833-4c1053e5e6d3)
 
 
 ### 웹 서버의 응용 서비스 : 클라우드 저장소 구축
