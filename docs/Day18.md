@@ -26,7 +26,7 @@
 
 7. DB에 접속해서 테이블 생성하기
 - `create table product (ID varchar(10), NAME varcahr(10), price(10));`
-- `insert into product value("10000","book",15000");
+- `insert into product value("10000","book",15000");`
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d8f90938-2ef9-478a-933b-e46c2608f2ae)
 
@@ -47,7 +47,7 @@
    cd /etc/httpd/conf
    vi httpd.conf
    ```
-   ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c58e4da9-e677-42ec-bf5b-010106c667c7)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c58e4da9-e677-42ec-bf5b-010106c667c7)
 
 6. 클라이언트 서버에서 `cd /var/www` 아래에 html과 vi 폴더에 각각 index.html파일 생성
 
@@ -65,6 +65,7 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/e4b62648-dbcb-4b42-92d4-5593e18e5a17)
 
 10. 해당 도메인으로 접근
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/96aae25d-9849-498d-a7dc-4616d1ef8730)
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2dede75b-bf9d-4a72-8833-4c1053e5e6d3)
