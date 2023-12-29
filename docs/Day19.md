@@ -40,7 +40,36 @@
 
 #### SELinux 모드변경
 - `setenforce [0|1]`
-
+- 
 #### SELinux Default 모드 설정
-- /etc/selinux/config 파일 수정하면 booting시 적용
+- /etc/selinux/config 파일 수정하면 booting시 
+
+### SELinux 콘텍스트 변경
+- SELinux context 일시적인 변경
+  - `chcon -t <type> 파일명`
+- SELinux 디폴트 context로 변경
+  - `restorescon -v 파일명`
+- SELinux 디폴트 context 정의
+  - `semanage fcontext -a -t <type> 파일명`
+
+### SELinux Troubleshooting
+
+#### SELinux에서 파일에 대한 접근을 금지하는 경우
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/789a220c-9273-4cc1-8dea-7eedcd6ea1f8)
+
+##### SELinux 메시지 로깅
+- `setroubleshoot-server 패키지 설치`
+- /var/log/audit/audit.log- 감사 메시지
+- /var/log/messages - 간단한 요약 로그
+
+#### sealert -l UUID
+- 특정 사안에 대한 문제점 보고서
+- /var/log/message로 부터 확인
+
+
+#### sealert -a /var/log/audit/audit.log
+- 모든 감사 관련 문제 보고서
+
+
 
