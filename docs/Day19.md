@@ -129,7 +129,7 @@ cd /nfs
 
 4. `systemctl restart smb`로 서버 재시작
 
-5. window에서 네트워크 연결
+5. window에서 네트워크 드라이브 연결
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/6f13e16a-180e-4ef3-a5a9-a47307e66fbe)
 
