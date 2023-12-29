@@ -71,5 +71,49 @@
 #### sealert -a /var/log/audit/audit.log
 - 모든 감사 관련 문제 보고서
 
+## FTP 서버
+- Mac, Windows, Linux 컴퓨터 등의 장치에서 다른 장치로 전송하는 소프트웨어 애플리케이션
+
+### vsftp
+- 리눅스와 유닉스 환경에서 보안성과 성능이 우수한 FTP서버
+
+1. ubuntu에 `dnf -y install vsftpd`로 vsftpd 패키지 설치
+
+2.  
+
+3. 
+
+
+filezilla설치후 ftp서버 연동
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2e6748d3-5fb3-4a8c-bde6-86e83fd329ab)
+
+## NFS 서버
+- 리눅스 또는 유닉스 컴퓨터 사이에 저장 공간을 공유할 수 있도록 도와준다.
+
+1. ubuntu에서 `apt install -y nfs-kernel-server'설치
+
+2. 서버에서 `vi /etc/exports`에서 `/share 192.168.56.0/24(rw)추가`
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/6a4b3e76-1c89-4048-8d33-0ebf7270ee8d)
+
+3. 클라이언트에서 아래 명령어로 수동 마운트
+```bash
+showmount -e 192.168.56.10
+mkdir /nfs
+mount 192.168.56.10:/share /nfs
+cd /nfs
+```
+
+4. 서버에서 share폴더에 server.txt파일 생성하고
+
+5. 클라이언트에서 cd폴더로 이동하여 ls명령으로 server.txt파일 확인 가능
+
+6. 서버에서 `chmod 777 /share/`에서 권한을 변경해주면 클라이언트에서도 파일 생성 가능, 소유자와 그룹은 nobody로 생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a419e4aa-b1a5-4785-a447-b8c83ed1b37e)
+
+7. 클라이언트에서 /etc/fstab파일에 `192.168.56.10:/share /nfs nfs defaults 0 0`을 추가해 자동 마운트를 설정해준다.
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/185c8587-ccdb-4c63-8668-62f1e1c820e4)
+
+
 
 
