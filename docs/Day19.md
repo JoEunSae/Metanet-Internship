@@ -77,7 +77,7 @@
 ### vsftp
 - 리눅스와 유닉스 환경에서 보안성과 성능이 우수한 FTP서버
 
-1. ubuntu에 `dnf -y install vsftpd`로 vsftpd 패키지 설치
+1. centOS를 nfs서버로 에 `dnf -y install vsftpd`로 vsftpd 패키지 설치
 
 2.  
 
@@ -87,10 +87,10 @@
 filezilla설치후 ftp서버 연동
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2e6748d3-5fb3-4a8c-bde6-86e83fd329ab)
 
-## NFS 서버
+## NFS 서버(Linux)
 - 리눅스 또는 유닉스 컴퓨터 사이에 저장 공간을 공유할 수 있도록 도와준다.
 
-1. ubuntu에서 `apt install -y nfs-kernel-server'설치
+1. ubuntu를 nfs서버로 하기 위해 ubuntu에서 `apt install -y nfs-kernel-server'와 `nfs-utils`설치
 
 2. 서버에서 `vi /etc/exports`에서 `/share 192.168.56.0/24(rw)추가`
 
@@ -116,6 +116,17 @@ cd /nfs
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/185c8587-ccdb-4c63-8668-62f1e1c820e4)
 
+## Samba 서버(window)
+-  마이크로소프트와 인텔에서 개발한 SMB(Server Message Block) 네트워크 프로토콜을 이용해 윈도우와 유닉스계열의 운영체제나 다른 시스템 간의 자원을 공유할 수 있도록 만든 프로그램
 
+**linux서버에 samba서버를 구축하고 window를 클라이언트로 서버에 접근**
+
+1. 서버로 사용할 OS에 `dnf install -y samba`로 samba설치
+
+2. `systemctl start smb`로 samba서비스 실행
+
+3. 서버에 `/etc/samba/smb.conf`파일 수정
+
+4. 
 
 
