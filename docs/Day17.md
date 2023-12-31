@@ -22,8 +22,8 @@ virtualbox
 
 ssh-keygen - 키만들기
 
- sed  -i 's/PasswordAuthentication no/PasswordAuthentication yes/g` /etc/ssh/sshd_config
- systemctl  restart sshd
+ `sed  -i 's/PasswordAuthentication no/PasswordAuthentication yes/g` /etc/ssh/sshd_config`
+ `systemctl  restart sshd`
 
 
  ## DNS
@@ -37,7 +37,7 @@ ssh-keygen - 키만들기
 5. 로컬 네임 서버가 'ROOT 네임 서버'에 도메인의 주소를 묻는다.
 6. 'ROOT 네임 서버'도 도메인의 주소를 모르므로 'com 네임 서버'의 주소를 알려주며 'com 네임 서버'에 물어보라고 한다.
 7. 로컬 네임 서버가 'com 네임 서버'에 도메인의 주소를 묻는다.
-8. 'com 네임 서버'도 도메인의 주소를 모르므로 '~.com'을 관리하는 네임 서버의 주소를 알려주며 '~.com'네임 서버에 물어보라고 한다.
+8. com 네임 서버도 도메인의 주소를 모르므로 `~.com`을 관리하는 네임 서버의 주소를 알려주며 `~.com`네임 서버에 물어보라고 한다.
 9. 로컬 네임 서버가 '~.com 네임서버`에 도메인의 주소를 묻는다.
 10. 로켈네임서버는 클라이언트에게 요구한 IP주소를 알려준다
 11. 클라이언트는 획득한 주소로 접속을 시도한다.
@@ -57,26 +57,15 @@ ssh-keygen - 키만들기
 3. `systemctl restart named` -> 서비스 재시작
    - `systemctl enable named` -> 네임 서버 상시 가동
    - `systemctl status naemd` -> 네임 서버 상태 확인
-4. `dig@네임서버IP 조회할RUL` : 네임서버가 잘 동작하는지 확인
-5. `cat /etc/resolv.conf` : 네임 서버 변경
+4. 방화벽 설정을 위해 명령어 수행
+- `firewall-cmd --permanent --zone=public --add-port=53/tcp`
+- `firewall-cmd --permanent --zone=public --add-port=53/udp`
+- `firewall-cmd --reload `
+5. `dig@네임서버IP 조회할RUL` : 네임서버가 잘 동작하는지 확인
+6. `cat /etc/resolv.conf` : 네임 서버 변경
+- `nameserver [네임서버ip]`로 변경
 
-
-- www : host명
-- naver : sub-domain명
-- com : tab-level domain명
-
-/etc/hosts 파일에 ip를 등록
-
-/etc/named_conf수정
-
-/etc/named.rfc1912.zones
-
-`dig @192.168.91.128 www.google.com`
-
-**도메인명의 마지막은 '.'**
-
-/etc/resolv.conf - NameServer IP 등록
-
+7. firefox로 해당 사이트 접속
 
 #### 포워드 존 파일의 문법
 
