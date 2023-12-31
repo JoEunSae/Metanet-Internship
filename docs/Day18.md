@@ -2,7 +2,7 @@
 
 **APM(Apache + PHP + MySQL)**
 
-## Apache웹서버와 MariaDB연동하기
+## DB서버 구성하기(MariaDB)
 
 ### Maria DB 설치
 1. MariaDB설치
@@ -31,7 +31,7 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d8f90938-2ef9-478a-933b-e46c2608f2ae)
 
 
-### Apache web서버 설치
+### 웹 서버 구성하기(Apache)
 
 1. `sudo dnf install -y httpd httpd-manual`로 apache설치
    
