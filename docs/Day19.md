@@ -79,18 +79,16 @@
 
 1. centOS를 nfs서버로 에 `dnf -y install vsftpd`로 vsftpd 패키지 설치
 
-2.  
+2.  `/etc/vsftpd/vsftpd.conf`파일에서 `anonymous_enable=YES`로 수정
 
-3. 
+3. filezilla설치후 ftp서버 연동
 
-
-filezilla설치후 ftp서버 연동
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2e6748d3-5fb3-4a8c-bde6-86e83fd329ab)
 
 ## NFS 서버(Linux)
 - 리눅스 또는 유닉스 컴퓨터 사이에 저장 공간을 공유할 수 있도록 도와준다.
 
-1. ubuntu를 nfs서버로 하기 위해 ubuntu에서 `apt install -y nfs-kernel-server'와 `nfs-utils`설치
+1. ubuntu를 nfs서버로 하기 위해 ubuntu에서 `apt install -y nfs-kernel-server`와 `nfs-utils`설치
 
 2. 서버에서 `vi /etc/exports`에서 `/share 192.168.56.0/24(rw)추가`
 
