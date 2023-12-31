@@ -7,7 +7,7 @@
 ### Maria DB 설치
 1. MariaDB설치
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a74cf080-d6e9-4255-8f23-48432c9edd6f)
-- 실치 후 ubuntu로 mariadb접속.
+- 설처 후 ubuntu로 mariadb접속.
 
 3. `$ mysql_secure_installation`로 초기설정
 
