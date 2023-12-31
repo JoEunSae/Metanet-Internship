@@ -9,9 +9,9 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a74cf080-d6e9-4255-8f23-48432c9edd6f)
 - 설처 후 ubuntu로 mariadb접속.
 
-3. `$ mysql_secure_installation`로 초기설정
+2. `$ mysql_secure_installation`로 초기설정
 
-4. root계정으로 DB접속
+3. root계정으로 DB접속
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/03750219-5d57-4934-abc4-db948c1b1db0)
 
@@ -35,36 +35,36 @@
 
 1. `sudo dnf install -y httpd httpd-manual`로 apache설치
    
-3.클라이언트 서벗에서 방화벽 수정
+2.클라이언트 서벗에서 방화벽 수정
    ```bash
    sudo firewall-cmd --list-all
    sudo firewall-cmd --add-service=http --permanent
    sudo firewall-cmd --reload
    ```
    
-5. 클라이언트 서버에서 httpd.conf파일에서 도메인별로 경로를 매핑하여 가상 호스트 생성
+3. 클라이언트 서버에서 httpd.conf파일에서 도메인별로 경로를 매핑하여 가상 호스트 생성
    ```bash
    cd /etc/httpd/conf
    vi httpd.conf
    ```
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c58e4da9-e677-42ec-bf5b-010106c667c7)
 
-6. 클라이언트 서버에서 `cd /var/www` 아래에 html과 vi 폴더에 각각 index.html파일 생성
+4. 클라이언트 서버에서 `cd /var/www` 아래에 html과 vi 폴더에 각각 index.html파일 생성
 
-7. 클라이언트 서버에서 `vi /etc/hosts`에 요청할 도메인 입력
+5. 클라이언트 서버에서 `vi /etc/hosts`에 요청할 도메인 입력
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/76216b28-7c27-4374-a377-fb949d53a709)
 
 
-8. DNS 서버에서 `/etc/resolv.conf` namerserver ip를 자신의 nameserver ip로 변경
+6. DNS 서버에서 `/etc/resolv.conf` namerserver ip를 자신의 nameserver ip로 변경
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/cc4bb38b-7809-456b-a987-5ed456202719)
 
-9. DNS 서버에서 `/var/named/named.example.com` 파일에서 zoon 설정
+7. DNS 서버에서 `/var/named/named.example.com` 파일에서 zoon 설정
     
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/e4b62648-dbcb-4b42-92d4-5593e18e5a17)
 
-10. 해당 도메인으로 접근
+8. 해당 도메인으로 접근
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/96aae25d-9849-498d-a7dc-4616d1ef8730)
 
