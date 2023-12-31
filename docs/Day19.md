@@ -94,7 +94,7 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/6a4b3e76-1c89-4048-8d33-0ebf7270ee8d)
 
-4. 클라이언트에서 아래 명령어로 수동 마운트
+3. 클라이언트에서 아래 명령어로 수동 마운트
 ```bash
 showmount -e 192.168.56.10
 mkdir /nfs
