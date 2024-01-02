@@ -58,6 +58,64 @@
 ### 파일시스템 작업
 - `mkfs -t ext4 \ [위치]` : 파일시스템 생성
 
+## 6장 애플리케이션, 패키지 관리, 컨테이너
+- 프로그램
+- 프로세스
+- 데몬
+- 애플리케이션
+- 패키지
+- 패키지 관리자
+- 공급망
+- 부팅
+
+### systemd
+- 일부 리눅스 배포판에서 유닉스 시스템 V나 BSD init 시스템 대신 사용자 공간을 부트스트래핑하고 최종적으로 모든 프로세스들을 관리하는 init 시스템
+
+ #### 유닛
+ - service유닛
+ - target 유닛 
+ - mount 유닛
+ - timer 유닛 
+ - socket
+ - deevice
+ - automount
+ - swap
+ - path
+ - sanpshot
+ - slice
+ - scope
+
+#### systemctl로 관리하기
+- `systemctl enable`
+- `systemctl daemon-reload`
+- `systemctl start`
+- `systemctl stop`
+- `systemctl restart`
+- `systemctl reload`
+- `systemctl kill`
+- `systemctl status`
+
+#### 컨테이너
+- 운영체제 수준의 가상화 기술로 리눅스 커널을 공유하면서 프로세스를 격리된 환경에서 실행하는 기술
+
+#### 리눅스 네임스페이스
+- 프로세스를 실행할 때 시스템의 리소스를 분리해서 실행할 수 있도록 도와주는 기능
+- clond : 실행 컨텍스트의 일부를 부모 프로세스와 공유할 수 있는 자식 프로세스를 만드는 데 사용된다.
+- unshare : 기존 프로세스에서 공유된 실행 컨텍스트를 제거하는 데 사용된다.
+- setnx : 기존 프로세스를 기존 네임스페이스에 결합하는 데 사용된다.
+
+## 7장 네트워크
+
+### TCP/IP 스택
+- 대부분 IETF 사양에 의해 정의된 여러 프로토콜과 도구로 이루어진 계층 네트워크 모델이다.
+- 링크계층
+- 인터넷 계층
+- 전송 계층
+- 애플리케이션 계층
+
+### IPv4
+
+
 
 
 
