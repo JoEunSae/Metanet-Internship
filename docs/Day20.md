@@ -146,3 +146,22 @@
 
 깃 교과서<br>
 https://git.jiny.dev/
+
+### git저장소 구성하기
+
+1. `git init goodbird`로 git 저장소 생성
+
+2. `git config -- global init.defaultBrach main`로 디폴트 브랜치를 main으로 설정
+
+3. `git config --global user.email gjsl1945@naver.com` 커밋 정보를 전달받을 이메일 지정
+
+4. 해당 저장소 위치로 이동하여 파일 생성해보기
+
+5. `git status`로 확인해보면 수정된 파일이 stage에 올라가지 않은것을 확인할 수 있다.
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/545e46c6-73fe-4568-a1fc-c06c0e0e93e5)
+
+6. `git add hello.txt` 명령어로 stage에 추가
+
+7. `git log`명령으로 commit로그 확인가능
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/de0c96a9-08f2-4986-b010-9264febeffbf)
+
