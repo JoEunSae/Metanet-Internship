@@ -118,6 +118,7 @@
 ## 8장 관측가능성
 
 ### 리눅스 성능측정
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b8ef542d-13dd-4e2a-be31-3e5e2dedd9d8)
 
 ### 관측가능성 전략
@@ -158,12 +159,14 @@ https://git.jiny.dev/
 4. 해당 저장소 위치로 이동하여 파일 생성해보기
 
 5. `git status`로 확인해보면 수정된 파일이 stage에 올라가지 않은것을 확인할 수 있다.
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/545e46c6-73fe-4568-a1fc-c06c0e0e93e5)
 
-6. `git add hello.txt` 명령어로 stage에 추가
+7. `git add hello.txt` 명령어로 stage에 추가
 
-7. `git commit -m "first commit"`명령어로 커밋해준다
+8. `git commit -m "first commit"`명령어로 커밋해준다
 
-8. `git log`명령으로 commit로그 확인가능
+9. `git log`명령으로 commit로그 확인가능
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/de0c96a9-08f2-4986-b010-9264febeffbf)
 
