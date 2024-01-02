@@ -33,3 +33,9 @@
 - [Day17(12월27일)](./docs/Day17.md)
 - [Day18(12월28일)](./docs/Day18.md)
 - [Day19(12월29일)](./docs/Day19.md)
+
+## 4주차
+- [Day20(1월02일)](./docs/Day20.md)
+- [Day21(1월03일)](./docs/Day21.md)
+- [Day22(1월04일)](./docs/Day22.md)
+- [Day23(1월05일)](./docs/Day23.md)
