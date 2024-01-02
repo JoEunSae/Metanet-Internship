@@ -162,6 +162,8 @@ https://git.jiny.dev/
 
 6. `git add hello.txt` 명령어로 stage에 추가
 
-7. `git log`명령으로 commit로그 확인가능
+7. `git commit -m "first commit"`명령어로 커밋해준다
+
+8. `git log`명령으로 commit로그 확인가능
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/de0c96a9-08f2-4986-b010-9264febeffbf)
 
