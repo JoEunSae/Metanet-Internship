@@ -82,7 +82,7 @@ sudo apt-get update
 
 2. `docker run -d -p 8080:80 diamol/ch02-hello-diamol-web`으로 컨테이너 실행
 
-3. `docker cp index.html flamboyant_shirley:/usr/local/apache2/htdocs'으로 index.html복사
+3. `docker cp index.html flamboyant_shirley:/usr/local/apache2/htdocs`으로 index.html복사
 
 4. `docker restart flamboyant_shirley`로 컨테이너 재시작
 
