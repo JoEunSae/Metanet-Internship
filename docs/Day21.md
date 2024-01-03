@@ -44,17 +44,22 @@ sudo apt-get update
 
 ### docker 명령어
 
-`docker container run diamol/ch02-hello-diamol`로 컨테이너 실행
+`docker container run diamol/ch02-hello-diamol` : 컨테이너 실행
 
-`docker ps -a`로 컨테이너 상태 확인
+`docker ps -a` : 컨테이너 상태 확인
 
-`docker rm [Container ID]`로 컨테이너 삭제
+`docker rm [Container ID]` : 컨테이너 삭제
 
-`docker container top httpd` 해당 컨테이너 에서 동작중인 프로세스 확인
+`docker container top httpd` : 해당 컨테이너 에서 동작중인 프로세스 확인
 
-`docker container logs httpd` 컨테이너 로그 확인
+`docker container logs httpd` : 컨테이너 로그 확인
 
-`docker container inspect httpd` 이미지 or 컨테이너 세부정보 출력
+`docker container inspect httpd` : 이미지 or 컨테이너 세부정보 출력
+
+`docker stop $(docker container ls --all --quiet)` : 모든 컨테이너 중지
+
+`docker rm $(docker container ls --all --quiet)` : 모든 컨테이너 삭제
+
 
 
 ### 컨테이너에서 웹 사이트 호스팅
@@ -70,4 +75,18 @@ sudo apt-get update
 2. 해당 ip와 포트로 접근
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/8dd23ad5-f7e5-491b-bdbd-af9576349d85)
+
+#### 연습문제 : 컨테이너 파일 시스템 다루기
+
+1. index.html생성
+
+2. `docker run -d -p 8080:80 diamol/ch02-hello-diamol-web`으로 컨테이너 실행
+
+3. `docker cp index.html flamboyant_shirley:/usr/local/apache2/htdocs'으로 index.html복사
+
+4. `docker restart flamboyant_shirley`로 컨테이너 재시작
+
+5. 호스트 ip와 포트로 접근
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2f05ec60-0d06-4169-92c5-f2ae200f8a33)
 
