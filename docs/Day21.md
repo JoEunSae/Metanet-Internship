@@ -57,4 +57,17 @@ sudo apt-get update
 `docker container inspect httpd` 이미지 or 컨테이너 세부정보 출력
 
 
+### 컨테이너에서 웹 사이트 호스팅
+
+1. `docker run -d -p 8082:80 diamol/ch02-hello-diamol-web`
+- 호스트 포트번호 : 컨테이너 포트번호
+- -d : 컨테이너를 백그라운드에서 실행하며 커테이너 ID를 출력
+- -p : 컨테이너의 포트를 호스트 컴퓨터에 공개
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/50914eb7-4196-451a-ac9b-8b101f9f92bf)
+
+
+2. 해당 ip와 포트로 접근
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/8dd23ad5-f7e5-491b-bdbd-af9576349d85)
 
