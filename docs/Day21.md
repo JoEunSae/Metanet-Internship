@@ -113,10 +113,16 @@ sudo apt-get update
 
 #### MySQL 컨테이너
 
-`docker network create mynet`
+1. 같은 네트워크에 서 db에 접근하기 위해 네트워크 생성 `docker network create mynet`
 
-`docker run -d --network mynet --name mysql_server -e MYSQL_ROOT_PASSWORD=1 mysql`
+2. 환경 변수만 추가한 Dockerfile생성 
 
-`docker run -it --network mynet --rm mysql mysql -h mysql_server -u root -p`
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/9e3fc626-8f10-45e4-8519-330634f2c6cc)
 
+3. 이미지 파일 build `docker build -t gooddb .`
 
+4. 컨테이너 실행 docker run -d --network mynet --name gooddb gooddb`
+
+5. Docker파일에 선언한 사용자로 mysql접근 `docker run -it --network mynet --rm mysql mysql -h mysql_server -u root -p`
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/343b92b8-60ec-4c68-86ca-8b7a3c0de95d)
