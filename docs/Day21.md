@@ -90,3 +90,25 @@ sudo apt-get update
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2f05ec60-0d06-4169-92c5-f2ae200f8a33)
 
+### Dovkerfile(python이미지)
+
+1. 작업할 폴더 생성 mkdir image
+
+2. 해당 폴더에 다운받은 app.py파일 위치
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/7901bb36-41c5-432b-8f6e-ff46c19914a3)
+
+
+4. Dockerfile생성 `vi Dockerfile`
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d8452a66-6fd1-4af9-b232-227e5d09b3f6)
+
+4. `docker build -t mypython`로 이미지 파일 빌드
+
+5. `docker run -d -p 8085:80 --name mypython mypython` 빌드한 이미지 컨테이너 실행
+
+6. 해당 ip로 접근
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/14a1f45b-1fce-478f-aa26-8d242486e204)
+
+
