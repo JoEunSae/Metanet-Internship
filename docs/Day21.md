@@ -20,3 +20,41 @@ https://www.redhat.com/ko/topics/containers/what-is-docker
 ### Virtual Machine(가상머신) vs Docker Container(도커 컨테이너)
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/99876706-c19b-41db-a6f0-ffbd719884d1)
+
+### docker repository설치
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+```bash
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+
+### docker 명령어
+
+`docker container run diamol/ch02-hello-diamol`로 컨테이너 실행
+
+`docker ps -a`로 컨테이너 상태 확인
+
+`docker rm [Container ID]`로 컨테이너 삭제
+
+`docker container top httpd` 해당 컨테이너 에서 동작중인 프로세스 확인
+
+`docker container logs httpd` 컨테이너 로그 확인
+
+`docker container inspect httpd` 이미지 or 컨테이너 세부정보 출력
+
+
+
