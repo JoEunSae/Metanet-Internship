@@ -105,7 +105,7 @@ sudo apt-get update
 
 4. `docker build -t mypython`로 이미지 파일 빌드
 
-5. `docker run -d -p 8085:80 --name mypython mypython` 빌드한 이미지 컨테이너 실행
+5. `docker run -d -p 8085:8080 --name mypython mypython` 빌드한 이미지 컨테이너 실행
 
 6. 해당 ip로 접근
 
