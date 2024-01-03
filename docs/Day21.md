@@ -111,4 +111,12 @@ sudo apt-get update
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/14a1f45b-1fce-478f-aa26-8d242486e204)
 
+#### MySQL 컨테이너
+
+`docker network create mynet`
+
+`docker run -d --network mynet --name mysql_server -e MYSQL_ROOT_PASSWORD=1 mysql`
+
+`docker run -it --network mynet --rm mysql mysql -h mysql_server -u root -p`
+
 
