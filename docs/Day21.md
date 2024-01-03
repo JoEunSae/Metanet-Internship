@@ -90,7 +90,7 @@ sudo apt-get update
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2f05ec60-0d06-4169-92c5-f2ae200f8a33)
 
-### Dovkerfile(python이미지)
+### Dockerfile(python이미지)
 
 1. 작업할 폴더 생성 mkdir image
 
