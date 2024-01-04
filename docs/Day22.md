@@ -73,5 +73,24 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/517f2a48-6d96-442e-8ef8-9b73ec36bad0)
 
+## 도커 컴포즈로 분산 애플리에키션 실행하기
+
+### 컴포즈 파일 생성하기
+
+1. `vi docker-compose.yml`
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d363a088-5664-4de4-a526-a00f24a2fe27)
+
+2. `docker-compose up -d`로 컨테이너 실행
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/adb25052-4431-4e29-b595-653fb4616d97)
+
+3. `docker-compose down` 컨테이너 종료 후 삭제
+
+4. compose.yml파일에 apache서버도 추가
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/9f08228d-7842-4797-bd7e-69272908352a)
+
+
 
 
