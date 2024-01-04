@@ -14,17 +14,17 @@
 
 ### 도커 레지스트리 운영
 
-1. `docker run -d -p 5000:5000 --restart always --name registry registry:2`
+1. Docker Hub의 registry 이미지로 컨테이너 실행 `docker run -d -p 5000:5000 --restart always --name registry registry:2`
 
 2. `sudo vi /daemon.json`파일 생성
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/daae7258-4c8c-49b4-8c59-9dcec4f39c97)
 
-3. `docker tag myhttpd1 myregistry.local:5000/web/myhttpd:v1.0`
+3. `docker tag myhttpd1 myregistry.local:5000/web/myhttpd:v1.0` 새로 만든 레지스트리 도메인 네임 추가
 
-4. `docker push myregistry.local:5000/web/myhttpd:v1.0`
+4. `docker push myregistry.local:5000/web/myhttpd:v1.0` 레지스터리에 이미지 push
 
-5. `docker pull myregistry.local:5000/web/myhttpd:v1.0`
+5. `docker pull myregistry.local:5000/web/myhttpd:v1.0` 레지스터리에 이미지 pull
 
 
 ## 도커 볼륨을 이용한 퍼시스턴트 스트리지
