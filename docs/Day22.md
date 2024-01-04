@@ -16,7 +16,9 @@
 
 1. `docker run -d -p 5000:5000 --restart always --name registry registry:2`
 
-2. `sudo vi /etc/hosts`
+2. `sudo vi /daemon.json`파일 생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/daae7258-4c8c-49b4-8c59-9dcec4f39c97)
 
 3. `docker tag myhttpd1 myregistry.local:5000/web/myhttpd:v1.0`
 
