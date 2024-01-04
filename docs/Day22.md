@@ -25,3 +25,30 @@
 4. `docker push myregistry.local:5000/web/myhttpd:v1.0`
 
 5. `docker pull myregistry.local:5000/web/myhttpd:v1.0`
+
+
+## 도커 볼륨을 이용한 퍼시스턴트 스트리지
+
+### 도커 볼륨을 사용하는 컨테이너 실행하기
+
+1. `docker volume create myvol` 볼륨생성
+
+2. 생성한 볼륨을 지정하여 mysql 컨테이너 생성
+`docker run -d --network mynet -v myvol:/var/lib/mysql --name mysql_server -e MYSQL_ROOT_PASSWORD=1 -e MYSQL_USER=goodbird -e MYSQL_PASSWORD=1 mysql`
+
+3. mysql에 접속하여 데이터베이스 생성하고 테이블도 생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2ad6909c-6140-42e6-ae51-d1a0412c72e7)
+
+
+4. 빠져와서 Container를 삭제한다.
+
+5. 다시 같은 옵션으로 컨테이너 실행
+`docker run -d --network mynet -v myvol:/var/lib/mysql --name mysql_server1 -e MYSQL_ROOT_PASSWORD=1 -e MYSQL_USER=goodbird -e MYSQL_PASSWORD=1 mysql`
+
+6. `docker run -it --network mynet --rm mysql mysql -h mysql_server1 -u goodbird -p` 으로 다시 접속하여 아까 만들었던 table이 있는지 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/26112cf7-5276-425b-85d3-7a083d3a30e5)
+
+
+
