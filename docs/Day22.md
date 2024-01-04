@@ -81,7 +81,7 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d363a088-5664-4de4-a526-a00f24a2fe27)
 
-2. `docker-compose up -d`로 컨테이너 실행
+2. `docker-compose up -d`로 컨테이너 실행 후 접근
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/adb25052-4431-4e29-b595-653fb4616d97)
 
