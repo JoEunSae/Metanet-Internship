@@ -71,6 +71,7 @@
 
 7. 해당 경로로 접근하기
 
-![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/302d1da1-6840-4311-818c-2253752983b2)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/517f2a48-6d96-442e-8ef8-9b73ec36bad0)
+
 
 
