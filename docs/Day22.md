@@ -51,4 +51,26 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/26112cf7-5276-425b-85d3-7a083d3a30e5)
 
 
+### wordpress mysql연동
+
+1. mysql Dockerfile작성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/46d60c5f-d572-4ec1-a5b1-9048dec437cf)
+
+2. mysql 이미지 파일 build `dokcer build -t gooddb .`
+
+3. `docker run -d --network mynet --name gooddb gooddb` mysql 컨테이너 실행
+
+4. wordpress Dockerfile작성 (반드시 DB연결 정보랑 같아야 한다.)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5f43085f-3f4e-4435-a396-5b888c84756e)
+
+5. wordpress 이미지 파일 build `dokcer build -t gooddb .`
+
+6. `docker run --name word --network mynet -p 8081:80 -d word` wordpress 컨테이너 실행
+
+7. 해당 경로로 접근하기
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/302d1da1-6840-4311-818c-2253752983b2)
+
 
