@@ -80,7 +80,7 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f76e02dd-9ed5-4d7e-87d6-ff3c1a488153)
 
 
-
+#### compose.yml로 grafana와 prometheus 컨테이너 실행하기
 
 
 
