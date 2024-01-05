@@ -129,11 +129,30 @@ networks:
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/20d63816-ef9a-45a6-b73a-0bcfb485e44c)
 
 
+### nginx, nginx-prometheus-exporter, prometheus, grafana 연동하기
+
+**nginx의 정보를 nginx-prometheus-exporter를 사용하여 prometheus에 전달하여 확인한다 좀더 정리된 화면으로 확인하기 위해 prometheus와 grafana를 연동하여 모너터링 한다.**
 
 
+1. nginx 컨테이너 실행 `docker run --rm -p 8080:80 nginx`
 
+2. `docker run -p 9113:9113 nginx/nginx-prometheus-exporter:1.0.0 --nginx.scrape-uri=http://192.168.56.10:8080/stub_status`로 nginx의 정보를 전달할 nginx-prometheus-exporter 컨테이너 구동
 
+3.  `docker cp elegant_villani:/etc/nginx/nginx.conf/default.conf .` default.conf파일을 가져와 아래 부분을 추가해준다.
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/e751c742-df6b-44c0-8c9a-eeb8182cd780)
+
+4. `vi prometheus.yml` yml파일도 수정
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/245fda75-6f8a-40d2-ad55-8a3012fc541c)
+
+5. prometheus접속해서 matric확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/85e639e1-6226-454c-bafe-e09f705de5e5)
+
+6. grafana도 연동해서 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bd1cbe68-8839-44dc-80c7-d65e1769a678)
 
 
 
