@@ -82,6 +82,15 @@
 
 #### compose.yml로 grafana와 prometheus 컨테이너 실행하기
 
+1. docker-compose.yml파일 작성
+
+2. `docker-compose up -d`로 컨테이너 실행
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/112b1d9d-f32a-4200-8ebe-380951f57763)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/20d63816-ef9a-45a6-b73a-0bcfb485e44c)
+
+
+
 
 
 
