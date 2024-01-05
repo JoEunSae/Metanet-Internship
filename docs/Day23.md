@@ -84,7 +84,46 @@
 
 1. docker-compose.yml파일 작성
 
-2. `docker-compose up -d`로 컨테이너 실행
+```yml
+version: '3'
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - '3000:3000'
+    volumes:
+      - gra-vol:/var/lib/grafana
+    networks:
+      - mynet
+    depends_on:
+      - prometheus
+    # environment:
+    #   - GF_SECURITY_ADMIN_PASSWOD=admin
+
+  
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    user: root
+    ports:
+      - 9090:9090
+    networks:
+      - mynet
+    volumes:
+      - pro-vol:/prometheus
+
+volumes:
+  gra-vol: {}
+  pro-vol: {}
+
+networks:
+  mynet:
+    external: true
+```
+
+3. `docker-compose up -d`로 컨테이너 실행
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/112b1d9d-f32a-4200-8ebe-380951f57763)
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/20d63816-ef9a-45a6-b73a-0bcfb485e44c)
