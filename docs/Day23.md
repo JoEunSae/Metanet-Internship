@@ -63,6 +63,24 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f17cb79a-e915-4f18-a25f-fc3891d2edbc)
 
 
+### Grafana
+프로메테우스에 쌓여있는 데이터를 보다 좋은 UI로 확인하기 위해서 사용
+
+
+1. `docker run -d --name=grafana -p 3000:3000 grafana/grafana` grafana컨테이너 실행
+
+
+2. prometheus와 grafana연결
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b662aa3e-73cb-44d6-8ccc-c485104e205c)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/7d06f1fb-33b8-4df5-a223-8747054f3b7e)
+
+3. grafana UI로 모니터링
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f76e02dd-9ed5-4d7e-87d6-ff3c1a488153)
+
+
+
 
 
 
