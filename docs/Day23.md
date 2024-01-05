@@ -2,7 +2,7 @@
 
 
 
-vscode설치
+**yml파일을 편하게 작성하기 위해 vscode설치**
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3c17a715-016c-493c-aba7-23c12a6f4201)
 
 ### compose.yml파일로 컨테이너 실행시켜 wordpress, mysql 연동하기
