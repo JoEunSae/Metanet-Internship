@@ -18,3 +18,56 @@
 3. 해당 경로로 접근
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/51abb8f5-6e52-471e-9180-43e2e3295c88)
+
+### Prometheus로 모니터링하기
+
+**프로메테우스: 정보수집,모니터링**
+
+**Prometheus Node Exporter는 하드웨어의 상태와 커널 관련 메트릭을 수집하는 메트릭 수집기**
+
+1. Prometheus Node Exporter설치
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/e5dd7e3e-5cfc-43d6-94d7-f95d4f84f1ba)
+
+2. centOS에서 Node Export 설치 `tar xvzf node_exporter-1.7.0.linux-amd64.tar.gz`
+
+3. Node Export실행 ./node_exporter
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/64b93b85-c1fa-450a-8a1d-116f5d37e5c8)
+
+
+4. Node Export가 보내는 정보를 받을 ubuntu에 prometheus 컨테이너 실행 `docker run -d -p 9090:9090 prom/prometheus`
+
+5. centos에서 `curl http://localhost:9100/metrics`로 메트릭 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a0541a4b-8d1b-4451-bca3-b7b8d66d2d81)
+
+6.  `docker cp awesome_stonebraker:/etc/prometheus/prometheus.yml .`
+
+7.  복사한 prometheus.yml파일 수정
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d7275b1b-2891-4d71-b8b1-d960478d3d77)
+
+8. `docker cp prometheus.yml  awesome_stonebraker:/etc/prometheus/prometheus.yml`로 수정한 파일 다시 붙여넣어준다.
+
+9.  `sudo firewall-cmd --add-port=9100/tcp --permanent` 로 방화벽을 해제 해준고 `sudo firewall-cmd --reload`로 방화벽 reload
+
+10.  unbuntu에서도 `curl http://192.168.56.11:9100/metrics`로 메트릭 확인 가능
+
+11.  해당 ip로 접근해서 target확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/42695ef4-ebe7-4b6d-a8ab-71a6731cde7b)
+
+12. 시스템에서 현재 사용 중이지 않은(free) 메모리의 양을 바이트 단위로 표시
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f17cb79a-e915-4f18-a25f-fc3891d2edbc)
+
+
+
+
+
+
+
+
+
+
