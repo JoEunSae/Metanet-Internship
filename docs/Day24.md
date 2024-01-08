@@ -63,6 +63,11 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3fc97a43-db1d-496f-890b-7c0aeebb39b8)
 
+### 쿠버네티스 제어
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/77ccd314-cd7e-425a-84c2-b126ac1fc08a)
+
+
 ### 쿠버네티스 종류
 
 #### 원조 쿠버네티스와 클라우드 버전
@@ -90,3 +95,37 @@ minikube start
 3. kubectl get svc로 ip확인하여 curl로 접근
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0f5e96df-9665-429a-9022-a8f81ea4cc63)
+
+
+### 매니페스트 파일
+- 매니페스트 파일을 쿠버네티스에 업로드하면, 그 내용을 etcd 데이터 베이스에 '바람직한 상태'로 등록하고 서버를 그 상태로 유지
+- 매니페스트 파일 작성
+  - YAML 또는 JSON 형식으로 작성
+  - 파드나 서비스에 대한 설정
+  - 파일명은 정해져 있지 않음
+- 디플로이먼트 리소스에 파드와 레플리카세트의 기능이 포합되어 있어 주로 디플로이먼트 리소스와 서비스 리소스를 많이 사용
+- 매니페스트 파일 분할
+  - 리소스 단위로 분할 가능
+  - 하나의 파일로 작성하는 경우에는 각 리소스를 '---'로 구분
+  - 리소스 단위로 나눌 때는 파일명에 리소스 구별이 되도록 이름 지정
+ 
+#### 매니페스트 파일 작성 방법
+
+- 매니페스트 파일의 주 항목
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/51d67ac4-13a3-4beb-a6e9-214395b7eb75)
+
+- 리소스 설정(API 그룹 및 유형)
+  - 리소스를 정의하려면 API그룹과 리소스 유형을 지정해야 함.
+  - `kubectl api-resources` 명령 또는 공식 사이트에서 확인
+- 메타데이터와 스팩
+  - metadata : 리스소의 이름이나 레이블을 작성
+  - spec : 리소스의 내용을 정의, 항목은 리소스의 유형에 따라 달라짐
+
+#### Deployment 매니페스트 파일
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3c652ded-8144-4fc5-b170-7916a8e16da1)
+
+#### Service 매니페스트 파일
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/663d5bc7-5255-4ea1-84ed-26d1d87eac4a)
+
+
