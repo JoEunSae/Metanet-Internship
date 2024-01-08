@@ -78,13 +78,18 @@
 
 ### minikube
 - 컴퓨터 한 대에 마스터 노드와 워커 노드를 구축하여 쿠버네티스 기능을 사용할 수 있음
-
- 1. minikube설치
+- minikube설치
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube start
 ```
+
+- `minikube addons list`로 Minikube 클러스터에 현재 설치된 애드온(Add-ons) 목록 확인
+- `minikube addons configure metallb`로 ip주소 자동 할당
+-  `kubectl get pods -o wide` 현재 Kubernetes 클러스터에서 실행 중인 Pod들의 목록을 가져오고, 각 Pod에 대한 자세한 정보를 포함하여 출력
+- `kubectl get svc`로 서비스 확인
+- `kubectl get pod`로 파드 확인
 
 #### kubernetes 클러스터에서 서버 배포하기
 
