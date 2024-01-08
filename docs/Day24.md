@@ -80,3 +80,13 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube start
 ```
+
+#### kubernetes 클러스터에서 서버 배포하기
+
+1.  Kubernetes 클러스터 내에 새로운 Deployment를 생성 `kubectl create deployment httpd --image=httpd`
+
+2. Kubernetes 클러스터 내에 존재하는 Deployment나 Replication Controller 등의 리소스를 외부와 연결하고 해당 리소스에 대한 서비스를 생성 `kubectl expose deployment httpd --type=LoadBalancer --port=80`
+
+3. kubectl get svc로 ip확인하여 curl로 접근
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0f5e96df-9665-429a-9022-a8f81ea4cc63)
