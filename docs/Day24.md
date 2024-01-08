@@ -70,7 +70,13 @@
 - 시스템 통합 전문가에게 의뢰하는 일이 많음
 - 클라우드 버전의 경우 전문적인 지식이 없어도 이용가능
 
-#### minikube
+
+### minikube
 - 컴퓨터 한 대에 마스터 노드와 워커 노드를 구축하여 쿠버네티스 기능을 사용할 수 있음
 
- 
+ 1. minikube설치
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube start
+```
