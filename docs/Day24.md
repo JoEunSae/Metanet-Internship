@@ -51,15 +51,15 @@
 
 #### Work Node
 - Pod
-- Kube Proxy
-- Kubelet :
+- Kube Proxy 
+- Kubelet : 마스터 노드에서 받은 명령을 기반으로 노드 상의 컨테이너를 관리하고 실행
 
 #### Master Node
-- etcd :
-- Kube Scheduler :
-- Kube Controller Manager :
-- Cloud Controller Manager :
-- Kube API Server :
+- etcd :  Kubernetes의 상태 및 구성 정보를 저장하는 데 사용
+- Kube Scheduler : 새로운 Pod가 어떤 노드에서 실행될지를 결정하는 역할을 담당하는 컴포넌트
+- Kube Controller Manager :  Kubernetes 클러스터의 여러 컨트롤러를 실행하는 역할을 하는 컴포넌트
+- Cloud Controller Manager : ubernetes 클러스터에서 클라우드 특화 기능을 제공하기 위한 역할을 하는 컴포넌트
+- Kube API Server : Kubernetes 클러스터의 중심 컴포넌트로, 클러스터의 API를 노출하고 클러스터 내의 모든 리소스와 객체를 관리하는 서버
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3fc97a43-db1d-496f-890b-7c0aeebb39b8)
 
