@@ -45,3 +45,4 @@
 - [Day25(1월09일)](./docs/Day25.md)
 - [Day26(1월10일)](./docs/Day26.md)
 - [Day27(1월11일)](./docs/Day27.md)
+- [Day28(1월12일)](./docs/Day28.md)
