@@ -128,4 +128,19 @@ minikube start
 #### Service 매니페스트 파일
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/663d5bc7-5255-4ea1-84ed-26d1d87eac4a)
 
+#### 매니페스트 파일로 pod구성하기
 
+1. vscode로 httpd.yml, service.yml 파일 작성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5970bb51-efaa-4df3-a153-16c6bfe5849f)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/79784337-c7f7-49a7-a488-a4c7eb793d56)
+
+2. `kubectl apply -t httpd.yml`와 `kubectl apply -t service.yml`로 pod생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/89b3afd8-0a28-44d0-8cc1-0fd2f26e0a19)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/02d678e9-0e83-4bc1-979a-8caa0dc261e1)
+
+3. curl로 접속
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f130c68f-4e3a-4962-a087-0b210858ca02)
+ 
