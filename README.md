@@ -39,3 +39,9 @@
 - [Day21(1월03일)](./docs/Day21.md)
 - [Day22(1월04일)](./docs/Day22.md)
 - [Day23(1월05일)](./docs/Day23.md)
+
+## 6주차
+- [Day24(1월08일)](./docs/Day24.md)
+- [Day25(1월09일)](./docs/Day25.md)
+- [Day26(1월10일)](./docs/Day26.md)
+- [Day27(1월11일)](./docs/Day27.md)
