@@ -67,3 +67,27 @@ kubectl create namespace wordpress
 
 helm install mywordpress bitnami/wordpress -n wordpress
 
+1. `kubectl create ns profana`로 네임스페이스 생성
+
+2. `vi prom-values.yaml`로 기본설정을 바꿔주거나 install이후 kubectl `edit svc prom-kube-prometheus-stack-prometheus -n profana`로 type변경
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/39a52a69-e951-4543-9101-af414f6cf0d4)
+
+3. `helm install prom prometheus-community/kube-prometheus-stack -f prom-values.yaml -n profana`로 클러스터에 배포
+
+4. `kubectl get pod -n profana`와 `kubectl get svc -n profana`로 파드, 서비스 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a1e86427-8f80-4311-b895-35bc331c61cd)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/fecb7565-601d-46f1-8af5-1e58bc230e49)
+
+5. EXTERNAL-IP로 prometheus접속
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/7a6499d8-4fe5-4722-891d-b77a83f7597f)
+
+6. EXTERNAL-IP로 grafana접속
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/abcf39df-95fe-4a5c-87a2-79c910185b1b)
+
+
+
+
