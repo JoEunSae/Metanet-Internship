@@ -33,7 +33,7 @@ wordpressservice.yml
        chmod 700 get_helm.sh
        ./get_helm.sh
     ```
-
+    
 #### helm주요개념
 - chart
   - helm 패키지
@@ -62,18 +62,14 @@ wordpressservice.yml
 - 목록 확인
   - `helm list / helm repo list`
 
-#### helm으로 kubernetes 클러스터에 배포하기
+#### helm으로 kubernetes 클러스터에 wordpress, mariadb배포하기
 
-1. helm install mynginx bitnami/nginx --set replicaCount=3
+1. `kubectl create namespace wordpress` 네임스페이스 생성
 
-
-
-
-kubectl create namespace wordpress
-
-helm install mywordpress bitnami/wordpress -n wordpress
+2. `helm install mywordpress bitnami/wordpress -n wordpress`로 클러스터에 wordpress설치
 
 
+#### helm으로 kubernetes 클러스터에 pormetheus, grafana배포해서 연동하기
 
 1. `kubectl create ns profana`로 네임스페이스 생성
 
