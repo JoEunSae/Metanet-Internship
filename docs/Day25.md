@@ -46,7 +46,13 @@ wordpressservice.yml
   - 동일 클러스터 내에 반복 설치 가능, 매번 새로운 릴리즈 생성
  
 #### helm 사용
-
+- chart 검색
+  - `helm search hub`
+  - `helm search repo`
+- 저장소 등록
+  - `helm repo add 저장소_주소`
+- 패키시 설치
+  - `helm install <release명> <저장소명>또는<URL>`
 - 변수(옵션) 확인 및 변경
   - `helm show values <저장소명>
   - 변수(옵션) 수정 후 설치시 적용 가능
@@ -66,6 +72,8 @@ wordpressservice.yml
 kubectl create namespace wordpress
 
 helm install mywordpress bitnami/wordpress -n wordpress
+
+
 
 1. `kubectl create ns profana`로 네임스페이스 생성
 
