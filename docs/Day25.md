@@ -54,9 +54,9 @@ wordpressservice.yml
 - 패키시 설치
   - `helm install <release명> <저장소명>또는<URL>`
 - 변수(옵션) 확인 및 변경
-  - `helm show values <저장소명>
+  - `helm show values <저장소명>`
   - 변수(옵션) 수정 후 설치시 적용 가능
-  - `helm install -f 수정파일명 <저장소명> --generate-name
+  - `helm install -f 수정파일명 <저장소명> --generate-name`
 - 삭제
   - `helm uninstall` 또는 `delete 릴리즈명`
 - 목록 확인
