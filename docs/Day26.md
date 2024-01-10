@@ -72,14 +72,13 @@
 - 현장 엔지니어의 축적된 지식을 모든 사용자에게 전파할 수 있는 공간
 
 ### OKD4 모니터링 구성요소
-- 클러스터 모니터링 Operator
-- Prometheus Operator
-- Prometheus
-- Prometheus Adapter
-- AlertManager
-- kube-state-metrics 에이전트
-- Openshift-state-metrics 에이전트
-- Node-export 에이전트
-- Thanos Queier
+- 클러스터 모니터링 Operator : Kubernetes 클러스터에서 애플리케이션 및 인프라스트럭처의 모니터링을 자동화하기 위한 Kubernetes Operator 중 하나
+- Prometheus Operator :  Kubernetes 클러스터에서 Prometheus를 관리하고 설정하기 위한 Kubernetes Operator 중 하나
+- Prometheus Adapter : Kubernetes에서 사용되는 Custom Metrics API에 Prometheus에서 수집한 지표(metric)를 노출시키기 위한 도구 중 하나
+- AlertManager :  Prometheus 생태계에서 사용되는 알람 관리 및 라우팅 도구로, Prometheus로 수집된 지표에 기반하여 생성된 알람을 효율적으로 관리하고 알림을 전달하는 역할
+- kube-state-metrics 에이전트 : Kubernetes 클러스터의 상태 및 메타 데이터를 수집하여 Prometheus에서 사용할 수 있는 메트릭으로 변환하는 에이전트
+- Openshift-state-metrics 에이전트 :  Kubernetes 클러스터의 상태와 관련된 메트릭을 수집하고 Prometheus에서 사용할 수 있는 형식으로 변환하는 에이전트
+- Node-export 에이전트 : 호스트 머신의 리소스 사용량 및 성능 지표를 수집하여 Prometheus 서버로 전송하는 역할
+- Thanos Queier :  Prometheus의 쿼리 언어를 확장하고 대규모 Prometheus 기반 메트릭 시스템에서 작동할 수 있도록 설계된 도구
 - Grafana
 - telemeter client
