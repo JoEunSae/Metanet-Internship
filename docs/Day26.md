@@ -71,3 +71,15 @@
 - OKD 구성요소 및 ISV(Independent Software Vendor) 컨텐츠에 대한 OTA(Over-the-air) 업데이트
 - 현장 엔지니어의 축적된 지식을 모든 사용자에게 전파할 수 있는 공간
 
+### OKD4 모니터링 구성요소
+- 클러스터 모니터링 Operator
+- Prometheus Operator
+- Prometheus
+- Prometheus Adapter
+- AlertManager
+- kube-state-metrics 에이전트
+- Openshift-state-metrics 에이전트
+- Node-export 에이전트
+- Thanos Queier
+- Grafana
+- telemeter client
