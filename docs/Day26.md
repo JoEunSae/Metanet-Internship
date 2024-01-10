@@ -47,3 +47,16 @@
 - OVS : 가상화 및 컨테이너 환경에서 네트워크 가상화를 지원하기 위한 오픈 소스 가상 스위치
 - OVN : 네트워크 가상화 및 SDN을 위한 오픈 소스 프로젝트로서, Open vSwitch위에서 동작하는 가상 네트워킹 솔루션
 - KubeVirt : kubernetes클러스터에서 가상 머신을 관리하고 실행하기 위한 오픈 소스 프로젝트
+
+### FCOS(Fedora CoreOS)
+- 차세대 단일 목적의 컨테이너 OS 기술
+- Container Linux의 자동화된 원격 업그레이드 기능 지원
+- 마스터 노드의 기본 OS이며, 클러스터 시스템 워커 노드의 기본 OS
+
+#### 주요기능
+- Fedora 리눅스 기반 (RPM, systemd, fedora 커널)
+- 기존의 Fedora 엄격하게 관리되도록 설계 (원격 관리, 시스템 설정 변경 최소화)
+- Cri-O 컨테이너 엔진 내장
+- 컨테이너 제어도구(Builda, Scopio, podman 등)
+- rpm-ostree 시스템을 사용한 트랜잭션 업그레이드 제공
+- Machine Config Operator 를 통한 OS 업그레이드
