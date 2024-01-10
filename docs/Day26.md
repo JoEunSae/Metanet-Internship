@@ -60,3 +60,14 @@
 - 컨테이너 제어도구(Builda, Scopio, podman 등)
 - rpm-ostree 시스템을 사용한 트랜잭션 업그레이드 제공
 - Machine Config Operator 를 통한 OS 업그레이드
+
+### Operator
+- 쿠버네티스 환경을 지속적으로 확인하고, 현재 상태를 사용하여 실시간으로 의사결정
+- 쿠버네티스 어플리케이션을 패키징, 배포, 관리하는 방법
+
+#### 기능
+- 설치 및 자동 업그레이드
+- 모든 시스템 구성요소의 지속적인 상태 확인
+- OKD 구성요소 및 ISV(Independent Software Vendor) 컨텐츠에 대한 OTA(Over-the-air) 업데이트
+- 현장 엔지니어의 축적된 지식을 모든 사용자에게 전파할 수 있는 공간
+
