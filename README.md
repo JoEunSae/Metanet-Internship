@@ -19,7 +19,7 @@
 - [Day8(12월13일)](./docs/Day8.md)
 - [Day9(12월14일)](./docs/Day9.md)
 - [Day10(12월15일)](./docs/Day10.md)
-- [WorkShop](./docs/WorkShop)
+- [WorkShop](./docs/클라우드_네트워크_workshop.pdf)
 
 
 ## 3주차
