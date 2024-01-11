@@ -35,6 +35,9 @@
 
 ### kubernetes와의 차이
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/54a284ad-bf71-4d6b-8c3a-f245eba0f05f)
+
+
 1. 상업 지원 및 추가 기능
 - Kubernetes: Kubernetes는 오픈 소스 프로젝트로서, 커뮤니티에 의해 개발되고 유지보수됩니다. 상용 서비스 및 지원은 여러 업체에서 제공
 - OpenShift: Red Hat은 OpenShift를 상용 제품으로 제공하며, Red Hat의 기술 지원 및 추가 기능, 보안 업데이트, 개발 도구 등을 포함
