@@ -47,3 +47,10 @@
 - [Day26(1월10일)](./docs/Day26.md)
 - [Day27(1월11일)](./docs/Day27.md)
 - [Day28(1월12일)](./docs/Day28.md)
+
+## 6주차
+- [Day29(1월15일)](./docs/Day29.md)
+- [Day30(1월16일)](./docs/Day30.md)
+- [Day31(1월17일)](./docs/Day31.md)
+- [Day32(1월18일)](./docs/Day32.md)
+- [Day33(1월19일)](./docs/Day33.md)
