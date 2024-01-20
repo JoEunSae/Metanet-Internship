@@ -18,7 +18,8 @@
 - `kubectl get pod -n project`와 `kubectl get svc -n project`로 nginx와 nginx-ecport 파드와 서비스 생성 확인
   
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/a36bfa62-f6f6-41e2-855d-20c61701dc9f)
-
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f7a20d47-c36c-401f-ae6e-3cbf16719ac6)
+Nginx는 80포트 Nginx-Export는 9113포트로 생성된것을 확인
 
 5. 
 
