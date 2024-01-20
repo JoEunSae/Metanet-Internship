@@ -6,3 +6,12 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/6dd4032b-8213-4d16-b005-78a3cfaf97f0)
 - `expr: nginx_http_requests_total{instance="192.168.49.10:9113", job="nginx"} > 1000`nginx서버에 누적 1000번이상의 request가 요청 되었을 경우 경고를 주는 rule설정
+
+2. prometheus의 alerts에 들어가 rule 설정 확인
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/24da3826-0207-4f41-970a-351201423cf4)
+
+3. 테스트를 위해 nginx웹 서버에 트래픽을 주는 apache-banch설치
+- `sudo apt-get install -y apache2-utils`
+- `ab -n 10000 -c 10 http://192.168.49.10/`로 nginx에 10000번 request
+
+4. 
