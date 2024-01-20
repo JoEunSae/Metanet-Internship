@@ -54,3 +54,5 @@
 - [Day31(1월17일)](./docs/Day31.md)
 - [Day32(1월18일)](./docs/Day32.md)
 - [Day33(1월19일)](./docs/Day33.md)
+- [WorkShop](./docs/미니프로젝트1.pdf)
+- [WorkShop](./docs/미니프로젝트2.pdf)
