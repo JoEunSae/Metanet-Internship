@@ -45,6 +45,7 @@ prometheus-communiy repository는  Prometheus, Prometheus-Alertmanaget, Node-Exp
 
 10. values.yml파일을 가져와 target으로 nginx-export를 추가해준다.
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/16fcad2b-0685-4c23-87a5-f24851143ac4)
+- 변경사항 적용을 위해 `helm upgrade my-prometheus prometheus-community/prometheus -f values.yml -n project`수행
 
 11. prometheus에 접속해서 target확인
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/75eefd15-4719-4ac5-8714-30b583c64072)
