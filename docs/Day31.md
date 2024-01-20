@@ -33,7 +33,25 @@
 - `slack_api_url`에 slack 토큰 url지정
 
 6. 연동되면 alertmananger가 보내는 경고를 확인할 수 있다.
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2c3598fc-cc08-406f-a940-b22aba0eeeda)
 
-7. 
+7. Grafana Dashboard로 모니러팅 하기 위한 prometheus grafana연동
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/1503a3a3-b086-40c4-b082-70da239e512a)
+
+
+8. 똑같은 방버법으로 이번에는 Node-Export target으로 추가
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/4d42db02-f6e3-480f-8ec2-0c2bf1e11015)
+
+9. Grafana Dashboard에 추가
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0333652d-1602-4d17-b20c-2cfd6a5a9566)
+
+10. cpu에 부하 테스트를 위해 `stress --cpu 3`수행
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2c067434-0978-43f8-98b1-f104dc96a413)
+
+
+
 
