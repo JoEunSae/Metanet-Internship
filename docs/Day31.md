@@ -20,3 +20,20 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/06bd3ff3-4fdb-426d-bd77-7d75ca44536b)
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/4a2a2dd7-81a6-47a8-9b87-3bc24a72f196)
+
+5. 이러한 경고를 slack을 통해 메시지를 받기 위해 alertmanager와 slack연동
+- 연동할 slack의 토근을 생성하기 위해 chanel생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/33ab7f82-f2f2-48a3-866b-0a563f5790c0)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/828445c4-3764-49d7-9a09-72b84b397fbe)
+
+- values.yml파일에 slack정보 설정
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/d039e34e-0ecf-4a36-8c86-0c7403ab2b91)
+- `slack_api_url`에 slack 토큰 url지정
+
+6. 연동되면 alertmananger가 보내는 경고를 확인할 수 있다.
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2c3598fc-cc08-406f-a940-b22aba0eeeda)
+
+7. 
+
