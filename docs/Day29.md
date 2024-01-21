@@ -1,4 +1,4 @@
-# Day29(MiniProject)
+# Day29(MiniProject2)
 
 ## 요구사항
 1. 리눅스 VM 구성
