@@ -54,5 +54,5 @@
 - [Day31(1월17일)](./docs/Day31.md)
 - [Day32(1월18일)](./docs/Day32.md)
 - [Day33(1월19일)](./docs/Day33.md)
-- [Miniproject1](./docs/미니프로젝트1.pdf)
+- [Miniproject1](./docs/미니프로젝트_조은새.pdf)
 - [Miniproject2](./docs/미니프로젝트2.pdf)
