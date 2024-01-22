@@ -56,3 +56,10 @@
 - [Day33(1월19일)](./docs/Day33.md)
 - [Miniproject1](./docs/미니프로젝트_조은새.pdf)
 - [Miniproject2](./docs/미니프로젝트2.pdf)
+
+## 8주차
+- [Day34(1월22일)](./docs/Day34.md)
+- [Day35(1월23일)](./docs/Day35.md)
+- [Day36(1월24일)](./docs/Day36.md)
+- [Day37(1월25일)](./docs/Day37.md)
+- [Day38(1월26일)](./docs/Day38.md)
