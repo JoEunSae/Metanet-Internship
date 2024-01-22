@@ -56,9 +56,11 @@
 1. openstack설치를 위해 VMware에 centOS-9생성
 
 2. locale설정을 위해 `sudo vi /etc/environment`에 설정 추가
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f8088757-b4ec-4f8d-92f1-7ff9858e126e)
 
 3. `sudo vi /etc/hosts`에 ip추가
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/951e87a3-203a-4e5c-a402-7ad5e17979eb)
 
 4. `sudo hostnamectl set-hostname openstack.example.org`로 hostname변경
@@ -81,6 +83,7 @@ sudo systemctl stop firewalld
 
 11. `cat keystonerc_admin`에서 admin의 password확인 후 해당 ip/dashborad로 접속
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/09d96809-3f04-4163-bdab-7e66c6319f90)
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f5232365-ef4b-49e0-b385-9a500d438334)
 
 ### openstack 가상화
