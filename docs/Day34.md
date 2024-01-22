@@ -51,7 +51,58 @@
   -  대부분의 유형의 리소스(가상 머신, 볼륨, 유동 IP, 사용자, 보안 그룹 등)을 생성 할 수 있습니다.
   -  Ceilometer의 데이터를 사용하여 응용 프로그램 스케일링을 자동으로 만들 수 있습니다.
 
-### openstack 사용사례
+### openstack 설치
 
+1. openstack설치를 위해 VMware에 centOS-9생성
+
+2. locale설정을 위해 `sudo vi /etc/environment`에 설정 추가
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f8088757-b4ec-4f8d-92f1-7ff9858e126e)
+
+3. `sudo vi /etc/hosts`에 ip추가
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/951e87a3-203a-4e5c-a402-7ad5e17979eb)
+
+4. `sudo hostnamectl set-hostname openstack.example.org`로 hostname변경
+
+5. 방화벽 해제
+```bash
+sudo systemctl disable firewalld
+sudo systemctl stop firewalld
+```
+
+6. crb repository활성화 `sudo dnf config-manager --enable crb`
+
+7. OpenStack Bobcat 버전의 릴리스를 사용할 수 있도록 시스템에 관련된 저장소를 추가 `sudo dnf install -y centos-release-openstack-bobcat`
+
+8. packstack 설치 `sudo dnf install -y openstack-packstack`
+
+9. selinux를 중지 시킨다. `sudo setenforce 0`
+
+10. allinone으로 openstack배포 `sudo packstack --allinone`
+
+11. `cat keystonerc_admin`에서 admin의 password확인 후 해당 ip/dashborad로 접속
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/09d96809-3f04-4163-bdab-7e66c6319f90)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f5232365-ef4b-49e0-b385-9a500d438334)
+
+### openstack 가상화
+
+1. admin계정에서 프로젝트와 사용자 생성
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b760e842-500f-48dc-81b3-0593a75c91ea)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3c4e750b-149e-460c-9c82-2ea92b5cdfb5)
+
+2. 가상 네트워크 생성
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/01f611cb-0304-4095-8ec7-e140584eb55d)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/de421369-cf21-43fe-b9d5-7346e8fce8f6)
+
+
+3. 생성한 사용자 계정에서 네트워크 생성
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c3dc251d-8723-4d3d-bfc5-3d7d1e2794ac)
+
+4. 라우터를 생성하여 admin에서 만든 네트워크와 사용자 계정에서 만든 네트워크 연결
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/21dce9d3-7f62-48ca-bd2b-ab5ccf03e34c)
+
+5. VM생성
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b4e87bc1-33b1-4e71-84af-d96a2bd28fe7)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c53ace5c-df42-473a-a17e-59c66df47667)
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bdc45052-df0d-4afe-807e-cb7b56473fdc)
 
 
