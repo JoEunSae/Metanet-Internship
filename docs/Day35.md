@@ -5,12 +5,14 @@
 ### 이미지로 인스턴스 생성하기
 
 1. 이미지는 ubuntu로 사용
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/622c3cfe-445a-40f9-a78e-0a731e7468bd)
 
-2. 다운받은 ubuntu이미지로 openstack이미지 생성
+3. 다운받은 ubuntu이미지로 openstack이미지 생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/fdcf07b5-4454-40a8-a78c-d2b0ee511759)
 
-3. 가상머신 생성
+5. 가상머신 생성
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5f59b4ff-2918-4409-8ca6-4a01a496f497)
 
