@@ -73,3 +73,59 @@
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/61d94030-bde1-44de-a3ae-4acb3d2df100)
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/fd233b16-cb79-471b-9dee-1d0c5e84bd3e)
+
+#### 프론트/백 서버 만들기
+
+1. Window11을 프론트 서버로 사용, 이전 VM과 다르게 인바운드 포트 허용
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/da20772b-2e25-4c26-9806-58dc00093cd8)
+
+2. 새 디스크 추가
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/62786688-fa3c-4866-afbc-b21036ea5d60)
+
+3. 모니터링 설정 후 만들기
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/60adbfab-01b6-4c99-9d30-aec19cb488f9)
+
+4. window서버에 접속해서
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/9c7a4074-134f-41ab-8c9e-24347c1820fb)
+
+5. ubuntu linux를 back서버로 생성
+
+6. window terminal에서 back-end서버로 ssh 접속 `ssh -i .ssh/goodbird-key.pem goodbird@172.16.1.5`
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5092c82f-cd5f-4840-b26e-c059579d133b)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b23533de-bf12-44e8-9513-b440cd658b5f)
+
+### Storage
+
+#### 스토리지 개요
+- 비정형 데이터 : 데이터가 개체로 존재하며 구조화되지 않아서 연산이 불가능한 데이터 ex) 문서,동영상,이미지 등의 이진 파일
+- 반정형 데이터 : 스키마에 해당하는 메타데이터와 데이터가 함께 제공되며 연산 불가능 ex) HTML이나 XML, JSON, YAML 형식 데이터
+- 정형 데이터 : 고정된 칼럼에 저장되거나 행과 열에 의해 데이터 속성이 구분되는 데이터 ex) RDBMS 테이블, 스프레드시트
+
+#### Azure 스토리지 특징
+- 중복성 보장
+- 보안
+- 확장성
+- 마이크로소프트가 관리
+- 유연한 접근성
+- 개발과 관리의 편리성
+
+#### 스토리지 계정 유형
+- 블록 Blob : 더 작은 개체 데이터를 저장하는 블록 Blob과 추가 Blob 전용 스토리지 계정, 더 빠른 트랜잭션 속도가 필요하거나 일관성 높은 짧은 대기 시간이 필요한 시나리오에 적합
+- 파일 공유 : 엔터프라이즈 또는 고성능 애플리케이션에 적합하며 SMB 및 NFS 파일 공유를 모두 지원해야 하는 경우 사용
+- 페이지 Blob : 임의 읽기/쓰기 작업이 필요하거나 범위 기반 업데이트가 포함된 파일에 대해 대기 시간이 짧고, 일관적인 높은 성능을 제공해야 할 경우 사용
+
+#### 중복 옵션
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/e8d598b3-0f07-49f8-a6ac-bf36e40a2a9c)
+
+- LRS : 데이터 센터 내에 3번 동기 복사 **동일 리전 하나의 AZ에서**
+- ZRS : 3개의 가용성 영역에서 동기 복사 **동일 리전 여러 AZ에서**
+- GRS : LRS + 보조 지역 데이터 센터 내에 비동기 복사 후, 보조 지역 내에서 LRS를 사용해 3번 동기 복사 **다른 리전에 하나의 AZ에**
+- GZRS : ZRS + 보조 지역 데이터 센터 내에 비동기 복사 후, 보조 지역 내에서 LRS를 사용해 3번 동기 복사 **다른 리전에 여러 AZ에**
+
