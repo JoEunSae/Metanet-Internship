@@ -21,13 +21,16 @@
 
 #### 가상 네트워크 만들기
 
-1. 기본사항 
+1. 기본사항
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bf7f698b-ddbe-41a2-9367-42b153eeb299)
 
 2. IP주소
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/90b03c28-bedc-4ace-a079-ae12223d617a)
 
 3. 서브넷 추가
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/22efb2b0-523e-4352-b952-d7139bb6f771)
 
 ### Azure Virtual Machine
