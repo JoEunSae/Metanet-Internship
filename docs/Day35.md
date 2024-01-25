@@ -26,4 +26,4 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/89effd9d-84d7-4176-984e-82a03c5fca63)
 
-
+## 오후에는 메타넷 부서소개 참여
