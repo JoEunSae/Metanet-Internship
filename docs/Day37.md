@@ -10,7 +10,6 @@
 - 안전한 통신을 위한 트래픽 격리
 - 하이브리드 연결
 - 기본 outbound 인터넷 가능
-- 인바운드 공용IP 주소나 
 
 #### 서브넷
 - 네트워크 성능과 속도가 향상된다.
@@ -92,7 +91,13 @@
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/9c7a4074-134f-41ab-8c9e-24347c1820fb)
 
-5. ubuntu linux를 back서버로 생성
+- 웹 서버 역할 설치 `Install-WindowsFeature -Name Web-Server -IncloudManagementTools`
+- Deafult.html만들기 `Set-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "Running Jarvis built on Copilot from host $($env:computername) !"`
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/cf801915-9e53-43fe-86e8-733ed1a1f267)
+
+
+5. ubuntu linux를 back서버로 생성 (ssh공개키 방식, 공용 인바운드 포트 없음)
 
 6. window terminal에서 back-end서버로 ssh 접속 `ssh -i .ssh/goodbird-key.pem goodbird@172.16.1.5`
 
@@ -128,4 +133,29 @@
 - ZRS : 3개의 가용성 영역에서 동기 복사 **동일 리전 여러 AZ에서**
 - GRS : LRS + 보조 지역 데이터 센터 내에 비동기 복사 후, 보조 지역 내에서 LRS를 사용해 3번 동기 복사 **다른 리전에 하나의 AZ에**
 - GZRS : ZRS + 보조 지역 데이터 센터 내에 비동기 복사 후, 보조 지역 내에서 LRS를 사용해 3번 동기 복사 **다른 리전에 여러 AZ에**
+
+#### 스토리지 계정 만들기
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/814c3d1b-3d2f-4405-aea9-cf90d5e37a60)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/229757da-fbde-4805-a63e-f0ef506ce110)
+
+#### 컨테이너(Blob) 스토리지
+- 구조화되지 않은 대량의 비정형 데이터를 저장하기 위한 개체 스토리지 솔루션이다.
+- Blobs라는 이름에서 컨테이너로 변경
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/9834cbc4-9093-443e-95ec-baf2bc1d7fcb)
+
+
+#### 테이블 서비스
+- 스키마 없는 키/값 저장소로 설계되었으며 구조화된 NoSQL 데이터용 저장소
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/5d3c8032-37cc-4bd6-9275-2fe1e374c088)
+
+
+#### 큐 스토리지
+- 대규모 비동기 메시지 처리가 필요한 서비스나 애플리케이션에 사용
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/eb4496c1-5079-43cb-93d4-cfc29b9998fc)
+
 
