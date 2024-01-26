@@ -89,23 +89,32 @@ sudo systemctl stop firewalld
 ### openstack 가상화
 
 1. admin계정에서 프로젝트와 사용자 생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b760e842-500f-48dc-81b3-0593a75c91ea)
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3c4e750b-149e-460c-9c82-2ea92b5cdfb5)
 
 2. 가상 네트워크 생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/01f611cb-0304-4095-8ec7-e140584eb55d)
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/de421369-cf21-43fe-b9d5-7346e8fce8f6)
 
 
 3. 생성한 사용자 계정에서 네트워크 생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c3dc251d-8723-4d3d-bfc5-3d7d1e2794ac)
 
 4. 라우터를 생성하여 admin에서 만든 네트워크와 사용자 계정에서 만든 네트워크 연결
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/21dce9d3-7f62-48ca-bd2b-ab5ccf03e34c)
 
 5. VM생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b4e87bc1-33b1-4e71-84af-d96a2bd28fe7)
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c53ace5c-df42-473a-a17e-59c66df47667)
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bdc45052-df0d-4afe-807e-cb7b56473fdc)
 
 
