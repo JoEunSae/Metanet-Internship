@@ -75,9 +75,11 @@
 3. 네트워킹
 
 - vnet과 subnet생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/311159aa-ad29-41a9-ace2-cad887f17e76)
 
 - 부하 분산 장치 생성
+
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0f44ba06-880b-4767-813a-c70cc62573a1)
 
 4. 확장 중
