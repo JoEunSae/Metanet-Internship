@@ -60,12 +60,83 @@
 - 한 곳에서 자동/수동 크기 조정을 포함하여 VM 집합을 관리, 구성하고 업데이트할 수 있다.
 - AWS의 autoscaling group과 유사
 
+### VMSS 배포하기
 
+1. 기본 사항
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/47ff1462-8be7-4ee5-a77d-5b126d918d41)
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/870093cf-aadd-4df8-b167-27236813a319)
 
+2. 디스크
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c0f1a63c-d739-47be-aac2-4062c382aef2)
 
+3. 네트워킹
 
+- vnet과 subnet생성
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/311159aa-ad29-41a9-ace2-cad887f17e76)
 
+- 부하 분산 장치 생성
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0f44ba06-880b-4767-813a-c70cc62573a1)
 
+4. 확장 중
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/45f5ace0-0808-4ec3-ba2d-5ca52232dd12)
+
+5. 관리
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/77e834ba-b5e6-4aee-8c7a-51af1ed69492)
+
+#### VMSS의 각 VM 인스턴스에 데이터 디스크 연결과 프라이데이 프런트 엔드 웹 서비스 구성을 자동화와 autoscaling이 되는지 확인
+
+1. 디스크 드라이브 및 웹 서비스 구성하는 스크립트
+```
+#Setup Data Disk
+#Get-Disk | Where-Object IsOffline -EQ $true | Set-Disk -IsOffline $false
+Get-Disk | Where-Object PartitionStyle -EQ 'RAW' | Initialize-Disk
+New-Partition -DiskNumber 2 -UseMaximumSize -DriveLetter X
+Format-Volume -DriveLetter X -FileSystem NTFS -NewFileSystemLabel webdata -Confirm:$false
+
+#Setup IIS
+Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+
+#Create Default.html
+Set-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "Running FRIDAY Web Service from host $($env:computername) !"
+```
+
+2. 스토리지 계정 만들기
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/3e3e5c4b-eb57-44b8-b8ab-6a301449f262)
+
+3. Blob 컨테이너 생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/82b6612d-1edc-4a67-ae58-7a73f2052426)
+
+4. blob 아까 생성한 스크립트 업로드
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/7937896c-8f74-4a9a-9a7d-e8cc2389675f)
+
+5. vmss에 확장 프로그램으로 custom script extension설치
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/8b0b59f5-2ba8-45ba-804d-9ed395a11662)
+
+6. vmss확장 중 탭에서 수동으로 vm수 2개로 변경
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/ccdbce55-6315-4046-be47-c8c6c1bdabd5)
+
+7. 오버 프로비저닝으로 3개 vm 생성중
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/bc667ee6-edb5-4f66-b01c-9d1e5606b425)
+
+8. 원격 데스크톱 연결은 위해 vmss 인바운드 규칙 443과 3389허용
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/9e9a816e-ac84-43a5-93c0-918191261245)
+
+9. 원격 데스크톱으로 vm접속
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/c73737e5-da2f-46bc-90c0-177c110fc3f5)
+
+10. 추가된 디스크 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/ce2a0296-20e6-460e-9eb9-3843735de6bc)
