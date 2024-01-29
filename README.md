@@ -63,3 +63,10 @@
 - [Day36(1월24일)](./docs/Day36.md)
 - [Day37(1월25일)](./docs/Day37.md)
 - [Day38(1월26일)](./docs/Day38.md)
+
+## 9주차
+- [Day39(1월29일)](./docs/Day39.md)
+- [Day40(1월30일)](./docs/Day40.md)
+- [Day41(1월31일)](./docs/Day41.md)
+- [Day42(2월1일)](./docs/Day42.md)
+- [Day43(2월2일)](./docs/Day43.md)
