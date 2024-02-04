@@ -175,7 +175,7 @@ resource "aws_instance" "web" {
 
 ### Terraform으로 인프라 Azure에 배포하기
 
-1. 'az login`으로 azure cli 로그인
+1. `az login`으로 azure cli 로그인
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/94c20177-ddb4-4622-86a8-f743a34e6bc0)
 
