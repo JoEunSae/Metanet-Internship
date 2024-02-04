@@ -180,3 +180,43 @@ resource "aws_instance" "web" {
 2. test를 위한 providers.tf, main.tf, variables.tf 작성
 
 ```tf
+#providers.tf
+terraform {
+    required_providers {
+        azurerm = {
+            source = "hashicorp/azurerm"
+            version = "~>3.0"
+        }
+        random = {
+            source = "hashicorp/random"
+            version = "~>3.0"
+        }
+    }  
+}
+provider "azurerm" {
+    features {}
+}
+```
+
+```tf
+#main.tf
+resource "random_pet" "rg_name" {
+    prefix = var.resource_group_name_prefix
+}
+resource "azurerm_resource_group" "rg" {
+    location = var.resource_group_location
+    name = random_pet.rg_name.id
+}
+```
+
+```tf
+#outputs.tf
+output "resource_group_name" {
+    value = azurerm_resource_group.rg.name
+}
+```
+3. `terraform init`으로 초기화
+
+4. `terraform apply`로 인프라 배포
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b5fce969-2829-451d-bc06-4d8a30462635)
