@@ -69,3 +69,31 @@ sudo chmod +x /usr/bin/argocd
 
 ![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b55ab20c-01de-41f5-8e35-8e15bb5adda5)
 
+## AKS CLI로 구축하기(CloudShell)
+
+1. azure cloudshell로 `az login --tenant bac4b78b-fcc2-4614-a32b-b69330b1af9f`로 로그인
+
+2. 아래 명령으로 aks 클러스터 구축
+
+```
+AKSRG='aks-01-RG'
+LOCATION='eastus'
+az group create --name goodbirdAKS --location Japan East
+AKSNAME='goodbird-aks-cluster'
+az aks create --resource-group goodbirdAKS --name goodbird-aks-cluster --enable-managed-identity --node-count 1 --generate-ssh-keys
+az aks get-credentials --resource-group goodbirdAKS --name goodbird-aks-cluster
+```
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/23a718ae-644f-484d-8d90-e296411db5de)
+
+### Window에서 Azure CLI로 접근
+
+1. `az login`로 로그인
+```
+AKSRG='goodbirdAKS'
+AKSNAME='jes-aks-cluster'
+az aks get-credentials --resource-group $AKSRG --name $AKSNAME
+az aks get-credentials --resource-group goodbirdAKS --name jes-aks-cluster
+```
+
+2. `az aks get-credentials --resource-group goodbirdAKS --name jes-aks-cluster Merged "jes-aks-cluster" as current context in C:\Users\KOSA\.kube\config`로 클러스터에 연결
+
