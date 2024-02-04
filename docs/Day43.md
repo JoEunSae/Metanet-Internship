@@ -74,5 +74,109 @@
 - SaaS : Hashcorp에서 관리형으로 제공하는 서비스 형태(Terraform cloud)
 - Private Install :Terraform Enterprise로 인터넷이 격리된 환경에서 사내망 관리 목적의 서버형 설치
 
+### Terraform 설치
 
+1. 윈도우용 terraform설치
 
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/78577c7d-15be-43d1-866f-82106e2e9df2)
+
+2. 환경변수 추가
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/b167ece1-6505-4ce0-b773-c685a8181540)
+
+3. cmd에서 terraform설치 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/be3e0a56-9226-4ba0-849a-4bfc055718ab)
+
+4. VSCode에서 작업하기 위해 HashiCorp HCL Extension추가
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/79dba394-9c5e-4a4e-85b8-9aab341a00a3)
+
+### Terrform 커맨드
+- init : 작업 디렉토리 초기화 및 다른 명령어 실행 준비
+- validate : 구성의 유효성 검사
+- plan : 현재 구성에 필요한 변경 사항 표시
+- apply : 인프라 생성 또는 업데이트
+- destroy : 생성된 인프라 제거
+
+### Test를 위 한 main.tf작성
+
+```tf
+resource "local_file" "abc" {
+  content  = "abcdef!"
+  filename = "${path.module}/abc.txt"
+}
+```
+
+1. 작업 디렉토리 초기화를 위한 `terraform init`수행
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0f4f78d2-5b2d-47a7-af5c-8699d9586248)
+
+2. `terraform validate`로 문법 체크
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/60205994-8b6c-49d4-91f6-e9b8e76c31c6)
+
+3. `terraform plan`으로 이전 구성과 현재 구성 비교
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/503750e4-4586-472a-8154-8f39ed5df6bb)
+
+4. `terraform apply`로 인프라 생성
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/f5bc4b40-550f-4cba-86af-3f90dc47183b)
+
+5. 파일생성 확인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/8168ec6a-5c15-44e5-bf6c-3d5800b80e94)
+
+6. `terraform destroy`로 인프라 삭제
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/87dda4f2-c958-44a2-a02f-8214d432140a)
+
+**`terraform fmt`로 코드 자동 재배치**
+
+### Terraform으로 인프라 AWS에 배포
+
+1. AWS에 배포를 위한 사용자 액세스키 발급
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/cfd3780a-de55-4cc7-9f8e-91c422fd033e)
+
+2. AWS CLI설치
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/08d21692-097d-46d0-a0ee-e7213bd620f0)
+
+3. aws configure로 aws cli 로그인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/0bcacf6c-1f9d-4df9-a5c0-610e22d9712c)
+
+4. main.tf작성 (여기서 ami는 aws에서 ubuntu ami id확인)
+
+```tf
+provider "aws" {
+ region = "ap-northeast-2"
+}
+resource "aws_instance" "web" {
+ ami = "ami-0f3a440bbcff3d043"
+ instance_type = "t3.micro"
+ subnet_id = "subnet-0719172cdc66b2caf"
+}
+```
+
+5. `terraform init`으로 디렉터리 초기화
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/1f8d652f-a171-4abe-98f6-0d48d1dad014)
+
+6. `terraform apply`으로 aws에 배포
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/6444f589-8b63-43a6-97ca-287b9d8eb8e9)
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/2b20f355-a1cf-40c6-a441-9174d9f7b360)
+
+### Terraform으로 인프라 Azure에 배포하기
+
+1. 'az login`으로 azure cli 로그인
+
+![image](https://github.com/JoEunSae/Metanet-Internship/assets/83803199/94c20177-ddb4-4622-86a8-f743a34e6bc0)
+
+2. test를 위한 providers.tf, main.tf, variables.tf 작성
+
+```tf
