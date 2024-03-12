@@ -71,8 +71,3 @@
 - [Day42(2월1일)](./docs/Day42.md)
 - [Day43(2월2일)](./docs/Day43.md)
 
-## 10주차
-- [Day44(2월05일)](./docs/Day44.md)
-- [Day45(2월06일)](./docs/Day45.md)
-- [Day46(2월07일)](./docs/Day46.md)
-- [Day47(2월08일)](./docs/Day47.md)
