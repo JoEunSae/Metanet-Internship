@@ -72,4 +72,4 @@
 - [Day43(2월2일)](./docs/Day43.md)
 
 ## Final Project
-- [finalproject](./docs/final_project).pptx)
+- [finalproject](./docs/Final_Project.pptx)
